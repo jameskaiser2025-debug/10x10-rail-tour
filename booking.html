@@ -5,7 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Book it — Kaiser Solzie 10by10 Tour</title>
 <link rel="stylesheet" href="styles.css">
-</head>
+<style>
+.share-fab{position:fixed;right:18px;bottom:18px;z-index:9999}
+.share-btn{background:#A63A2E;color:#fff;border:2px solid #1A1A1A;box-shadow:4px 4px 0 #1A1A1A;padding:.9rem 1.1rem;font-weight:800;cursor:pointer;text-transform:uppercase}
+.share-panel{display:none;background:#F2E8CE;border:2px solid #1A1A1A;box-shadow:4px 4px 0 #1A1A1A;padding:.8rem;margin-bottom:.6rem;width:240px;text-align:left}
+.share-panel.open{display:block}
+.share-panel a{display:block;color:#1A1A1A;padding:.4rem 0;text-decoration:underline}
+.share-panel p{margin:.2rem 0;font-weight:700}
+</style></head>
 <body>
 <main class="section-wrap" style="max-width:720px;margin:0 auto;padding:2rem 1.25rem">
 <p><a href="index.html">← Back to the tour page</a></p>
@@ -54,5 +61,32 @@ document.getElementById("book-form").addEventListener("submit",e=>{
 });
 </script>
 <p>Questions about your spot? Email the tour: <a href="mailto:salz@kaisersolzie.com">salz@kaisersolzie.com</a></p>
+
+<div class="share-fab">
+<div class="share-panel" id="share-panel">
+<p>Share the tale of the tour</p>
+<a id="share-x" href="#" target="_blank" rel="noopener">Share on X</a>
+<a id="share-fb" href="#" target="_blank" rel="noopener">Share on Facebook</a>
+<a id="share-wa" href="#" target="_blank" rel="noopener">Share on WhatsApp</a>
+<a id="share-sms" href="#">Share by SMS</a>
+<a id="share-email" href="#">Share by email</a>
+<a id="share-copy" href="#">Copy tour link</a>
+<p id="share-status" style="font-weight:400;font-size:.85rem"></p>
+</div>
+<button class="share-btn" id="share-btn" aria-expanded="false">Share the tour ↗</button>
+</div>
+<script>
+(function(){
+const url=location.href, text="Kaiser Solzie — The 10 by 10 Rail Tour. 10 cities, 100 private 30-minute sets, $10 per set. November 9–20, 2026. Book it: ";
+document.getElementById("share-x").href="https://twitter.com/intent/tweet?text="+encodeURIComponent(text)+"&url="+encodeURIComponent(url);
+document.getElementById("share-fb").href="https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(url);
+document.getElementById("share-wa").href="https://wa.me/?text="+encodeURIComponent(text+url);
+document.getElementById("share-sms").href="sms:?body="+encodeURIComponent(text+url);
+document.getElementById("share-email").href="mailto:?subject="+encodeURIComponent("Kaiser Solzie — The 10 by 10 Rail Tour")+"&body="+encodeURIComponent(text+url);
+document.getElementById("share-copy").onclick=function(e){e.preventDefault(); if(navigator.clipboard){navigator.clipboard.writeText(url).then(()=>{document.getElementById("share-status").textContent="Link copied.";});} else {document.getElementById("share-status").textContent=url;}};
+const btn=document.getElementById("share-btn"), panel=document.getElementById("share-panel");
+btn.onclick=function(){const open=panel.classList.toggle("open"); btn.setAttribute("aria-expanded",String(open)); if(open && navigator.share){/* native share stays as fallback via the links below */}};
+})();
+</script>
 </body>
 </html>

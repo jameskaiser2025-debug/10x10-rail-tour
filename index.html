@@ -39,6 +39,13 @@ td{padding:.6rem .4rem;border-bottom:1px solid #ccc;vertical-align:top}
 footer{border-top:2px solid #1A1A1A;text-align:center;padding:2rem 1rem}
 footer .banner{font-family:'Oswald',Impact,sans-serif;font-size:1.6rem;letter-spacing:.05em}
 @media(max-width:760px){.hero,.cards{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}h1{font-size:2.6rem}}
+
+.share-fab{position:fixed;right:18px;bottom:18px;z-index:9999}
+.share-btn{background:#A63A2E;color:#fff;border:2px solid #1A1A1A;box-shadow:4px 4px 0 #1A1A1A;padding:.9rem 1.1rem;font-weight:800;cursor:pointer;text-transform:uppercase}
+.share-panel{display:none;background:#F2E8CE;border:2px solid #1A1A1A;box-shadow:4px 4px 0 #1A1A1A;padding:.8rem;margin-bottom:.6rem;width:240px;text-align:left}
+.share-panel.open{display:block}
+.share-panel a{display:block;color:#1A1A1A;padding:.4rem 0;text-decoration:underline}
+.share-panel p{margin:.2rem 0;font-weight:700}
 </style>
 </head>
 <body>
@@ -138,5 +145,32 @@ show(CITIES[0]);
 </div>
 <footer><div class="banner">KAISER SOLZIE / 10 × 10 / COAST TO COAST</div><p class="fine">KAISER SOLZIE • THE 10 BY 10 RAIL TOUR<br>Traveling coast-to-coast by Amtrak Rail Pass • All rights reserved.</p><p class="fine">Share the tour: kaisersolzie.com</p></footer>
 <p class="fine">Tour email: <a href="mailto:salz@kaisersolzie.com">salz@kaisersolzie.com</a> — via Spacemail for kaisersolzie.com</p>
+
+<div class="share-fab">
+<div class="share-panel" id="share-panel">
+<p>Share the tale of the tour</p>
+<a id="share-x" href="#" target="_blank" rel="noopener">Share on X</a>
+<a id="share-fb" href="#" target="_blank" rel="noopener">Share on Facebook</a>
+<a id="share-wa" href="#" target="_blank" rel="noopener">Share on WhatsApp</a>
+<a id="share-sms" href="#">Share by SMS</a>
+<a id="share-email" href="#">Share by email</a>
+<a id="share-copy" href="#">Copy tour link</a>
+<p id="share-status" style="font-weight:400;font-size:.85rem"></p>
+</div>
+<button class="share-btn" id="share-btn" aria-expanded="false">Share the tour ↗</button>
+</div>
+<script>
+(function(){
+const url=location.href, text="Kaiser Solzie — The 10 by 10 Rail Tour. 10 cities, 100 private 30-minute sets, $10 per set. November 9–20, 2026. Book it: ";
+document.getElementById("share-x").href="https://twitter.com/intent/tweet?text="+encodeURIComponent(text)+"&url="+encodeURIComponent(url);
+document.getElementById("share-fb").href="https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(url);
+document.getElementById("share-wa").href="https://wa.me/?text="+encodeURIComponent(text+url);
+document.getElementById("share-sms").href="sms:?body="+encodeURIComponent(text+url);
+document.getElementById("share-email").href="mailto:?subject="+encodeURIComponent("Kaiser Solzie — The 10 by 10 Rail Tour")+"&body="+encodeURIComponent(text+url);
+document.getElementById("share-copy").onclick=function(e){e.preventDefault(); if(navigator.clipboard){navigator.clipboard.writeText(url).then(()=>{document.getElementById("share-status").textContent="Link copied.";});} else {document.getElementById("share-status").textContent=url;}};
+const btn=document.getElementById("share-btn"), panel=document.getElementById("share-panel");
+btn.onclick=function(){const open=panel.classList.toggle("open"); btn.setAttribute("aria-expanded",String(open)); if(open && navigator.share){/* native share stays as fallback via the links below */}};
+})();
+</script>
 </body>
 </html>
