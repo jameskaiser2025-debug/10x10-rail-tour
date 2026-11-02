@@ -44,7 +44,7 @@
 </div>
 <p id="pay-note" class="fine-print">Payment links are set up from the tour owner's PayPal, Venmo, and Cash App accounts. If a button above does not yet lead to a payment page, that handle has not been added yet — email <a href="mailto:salz@kaisersolzie.com">salz@kaisersolzie.com</a> and Kaiser will send you the correct $10 link. You will not be charged on this page itself.</p>
 <script>
-// Payment handles — replace these three values with Kaiser's real handles to activate the buttons.
+// Payment handles — replace these three values with Kaiser Solzie's real handles to activate the buttons.
 // PayPal: paypal.me username, Venmo: @username (without @ in the link), Cash App: $cashtag (without $ in the link)
 const PAYPAL_HANDLE = ""; // e.g. "kaisersolzie"
 const VENMO_HANDLE = ""; // e.g. "kaisersolzie"
@@ -94,12 +94,12 @@ document.getElementById("book-form").addEventListener("submit",e=>{
 </div>
 <script>
 (function(){
-const url=location.href, text="Kaiser Solzie — The 10 by 10 Rail Tour. 10 cities, 100 private 30-minute sets, $10 per set. November 9–20, 2026. Book it: ";
+const url=location.href, text="Kaiser Solzie — The 10by10 Rail Tour. 10 cities, 100 private 30-minute sets, $10 per set. November 9–20, 2026. Book it: ";
 document.getElementById("share-x").href="https://twitter.com/intent/tweet?text="+encodeURIComponent(text)+"&url="+encodeURIComponent(url);
 document.getElementById("share-fb").href="https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(url);
 document.getElementById("share-wa").href="https://wa.me/?text="+encodeURIComponent(text+url);
 document.getElementById("share-sms").href="sms:?body="+encodeURIComponent(text+url);
-document.getElementById("share-email").href="mailto:?subject="+encodeURIComponent("Kaiser Solzie — The 10 by 10 Rail Tour")+"&body="+encodeURIComponent(text+url);
+document.getElementById("share-email").href="mailto:?subject="+encodeURIComponent("Kaiser Solzie — The 10by10 Rail Tour")+"&body="+encodeURIComponent(text+url);
 document.getElementById("share-copy").onclick=function(e){e.preventDefault(); if(navigator.clipboard){navigator.clipboard.writeText(url).then(()=>{document.getElementById("share-status").textContent="Link copied.";});} else {document.getElementById("share-status").textContent=url;}};
 const btn=document.getElementById("share-btn"), panel=document.getElementById("share-panel");
 btn.onclick=function(){const open=panel.classList.toggle("open"); btn.setAttribute("aria-expanded",String(open)); if(open && navigator.share){/* native share stays as fallback via the links below */}};
