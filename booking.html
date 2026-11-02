@@ -35,8 +35,24 @@
 <label>Preferred time window <input name="time" placeholder="e.g. afternoon, after 6pm" style="width:100%"></label>
 <label>Anything Kaiser should know (access, space, sound) <textarea name="notes" rows="3" style="width:100%"></textarea></label>
 <h2>Payment — $10</h2>
-<p><strong>Payment checkout is not yet connected on this page.</strong> This portal saves your booking request below and shows the $10 total. You will <strong>not</strong> be charged here, and your spot is not confirmed until Kaiser confirms it in writing and a payment link is sent to you.</p>
-<p>Payment methods planned, as on the original posters: credit card, PayPal, or Venmo — to be connected by the tour owner before payments open.</p>
+<p><strong>Pay $10 — choose a payment option below, after your spot is confirmed in writing.</strong> Do not pay before Kaiser confirms your city day, time, and location.</p>
+<div id="pay-options" style="display:grid;gap:.6rem">
+<a id="pay-paypal" class="button button-primary" href="#" style="text-align:center">Pay $10 with PayPal</a>
+<a id="pay-venmo" class="button button-primary" href="#" style="text-align:center">Pay $10 with Venmo</a>
+<a id="pay-cashapp" class="button button-primary" href="#" style="text-align:center">Pay $10 with Cash App</a>
+</div>
+<p id="pay-note" class="fine-print">Payment links are set up from the tour owner's PayPal, Venmo, and Cash App accounts. If a button above does not yet lead to a payment page, that handle has not been added yet — email <a href="mailto:salz@kaisersolzie.com">salz@kaisersolzie.com</a> and Kaiser will send you the correct $10 link. You will not be charged on this page itself.</p>
+<script>
+// Payment handles — replace these three values with Kaiser's real handles to activate the buttons.
+// PayPal: paypal.me username, Venmo: @username (without @ in the link), Cash App: $cashtag (without $ in the link)
+const PAYPAL_HANDLE = ""; // e.g. "kaisersolzie"
+const VENMO_HANDLE = ""; // e.g. "kaisersolzie"
+const CASHAPP_HANDLE = ""; // e.g. "kaisersolzie"
+function setPay(id, url, label){const a=document.getElementById(id); if(url){a.href=url; a.target="_blank"; a.rel="noopener";} else {a.href="#"; a.onclick=function(e){e.preventDefault(); document.getElementById("pay-note").textContent=label+" payment link is not added yet — email salz@kaisersolzie.com for the $10 link.";};}}
+setPay("pay-paypal", PAYPAL_HANDLE ? "https://www.paypal.me/"+PAYPAL_HANDLE+"/10USD" : "", "PayPal");
+setPay("pay-venmo", VENMO_HANDLE ? "https://account.venmo.com/pay?recipients="+VENMO_HANDLE+"&amount=10&note=10by10%20tour%20spot" : "", "Venmo");
+setPay("pay-cashapp", CASHAPP_HANDLE ? "https://cash.app/$"+CASHAPP_HANDLE+"/10" : "", "Cash App");
+</script>
 <button type="submit" class="button button-primary">Save my $10 booking request</button>
 </form>
 <div id="book-summary" style="white-space:pre-wrap;margin-top:1rem"></div>
