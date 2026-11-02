@@ -17,7 +17,7 @@ python3 -m http.server 8000
 Then visit http://localhost:8000.
 
 ## Before accepting bookings or publishing
-- Confirm the year and final November route dates.
+- November 9–20, 2026 dates have been confirmed by the site owner; verify the final city-by-city schedule and local arrival windows.
 - Confirm actual rail itinerary, local transit, arrival windows, and accessible meeting arrangements.
 - Confirm final ticket price, kit contents, audio delivery, cancellation/refund terms, and performance conditions.
 - Add a real booking/contact destination and payment provider. No payment is collected by this static site.
