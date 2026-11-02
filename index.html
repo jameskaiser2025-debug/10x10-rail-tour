@@ -22,7 +22,7 @@
     <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">MENU <span>☰</span></button>
     <div class="theme-switcher" role="group" aria-label="Choose color theme"><span>THEME</span><button type="button" data-theme-choice="industrial" aria-label="Industrial Neon Bodega" title="Industrial Neon Bodega"></button><button type="button" data-theme-choice="warped" aria-label="Warped Tour Sunburst" title="Warped Tour Sunburst"></button><button type="button" data-theme-choice="vinyl" aria-label="Vintage Vinyl and Amber" title="Vintage Vinyl and Amber"></button><button type="button" data-theme-choice="zine" aria-label="Street Punk Zine" title="Street Punk Zine"></button></div>
     <nav id="main-nav" class="main-nav" aria-label="Main navigation">
-      <a href="#ticket">The ticket</a><a href="#routing">Routing</a><a href="#sound">The sound</a><a class="nav-cta" href="#booking">Get the details ↗</a>
+      <a href="#ticket">The ticket</a><a href="#routing">Routing</a><a href="#sound">The sound</a><a href="#watch">Watch &amp; listen</a><a class="nav-cta" href="#booking">Get the details ↗</a>
     </nav>
   </header>
 
@@ -100,7 +100,7 @@
     <section id="routing" class="routing-section">
       <div class="section-wrap">
         <div class="routing-top"><div><p class="eyebrow">THE RAIL PASS DASH / 02</p><h2>Ten stops.<br><em>One long ride.</em></h2></div><p class="routing-intro">A coast-to-coast run built around rail travel, close-up performances, and the people who make a place feel like home.</p></div>
-        <div class="status-note"><span class="status-dot"></span><div><strong>November 9–20 — proposed dates; year to be confirmed</strong><p>November 9–20 is the proposed date range. The year, city-by-city timing, travel logistics, event details, and set availability still need confirmation before bookings open.</p></div></div>
+        <div class="status-note"><span class="status-dot"></span><div><strong>November 9–20, 2026 — locked dates</strong><p>November 9–20, 2026 is the locked date range for this tour. Set times within each city day, travel logistics, and set availability are still to be confirmed before payments are accepted.</p></div></div>
         <img class="route-art" src="assets/route-graphic.svg" alt="Illustrated conceptual route connecting the proposed tour regions; not a verified rail itinerary" loading="lazy">
         <div class="route-list">
           <div class="route-row"><span class="route-date">NOV <b>09</b></span><span class="route-city">Chicago, IL</span><span class="route-type">10 private sets proposed</span><span class="route-status">DETAILS PENDING</span></div>
@@ -135,15 +135,61 @@
       </div>
     </section>
 
+
+    <section id="watch" class="sound-section">
+      <div class="section-wrap sound-inner">
+        <div><p class="eyebrow">THE BACK STORY / 05</p><h2>Watch &amp;<br><em>listen.</em></h2><p>Before the knock at your door, see the archive clip and hear the acoustic songs — the DIY punk, Warped Tour, and Rochester back story behind the 10 by 10 sets.</p><p><a class="button button-outline" href="https://www.youtube.com/user/TheKaiserChannel" target="_blank" rel="noopener noreferrer">More on YouTube ↗</a></p><p><a class="button button-outline" href="https://kaisersolzie28.bandcamp.com/album/this-ones-for-friends-and-family-acoustic-tales-of-years" target="_blank" rel="noopener noreferrer">Stream the acoustic album on Bandcamp ↗</a></p></div>
+        <div class="sound-card"><span class="sound-label">WATCH / ARCHIVE CLIP</span><div style="position:relative;padding-top:56.25%"><iframe style="position:absolute;inset:0;width:100%;height:100%;border:0" src="https://www.youtube-nocookie.com/embed/ugyQeCp4PYo?rel=0" title="Kaiser Solzie archive clip" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><p>ARCHIVE CLIP</p><small>STREAMING VIDEO · AUDIO PLAYS IN THE PLAYER ABOVE</small></div>
+      </div>
+    </section>
+
     <section id="booking" class="booking-section section-wrap">
       <p class="eyebrow">KEEP YOUR EYES ON THE TRACKS / 05</p>
       <h2>The next stop<br>starts <em>with you.</em></h2>
-      <p class="booking-copy">November 9–20 is the proposed date range. The year, city-by-city logistics, final ticket terms, and a working booking channel still need confirmation. No payment is being collected on this page.</p>
-      <div class="booking-stamp"><span>BOOKING</span><strong>NOT OPEN</strong><small>CHECK BACK FOR CONFIRMED DETAILS</small></div>
+      <p class="booking-copy">November 9–20, 2026 is the locked date range. Pick your city below to see its booking steps. A request is not a confirmed reservation, and no payment is collected on this page until the set is confirmed in writing.</p>
+      <div id="city-booking" style="text-align:left;max-width:720px;margin:1.5rem auto 0">
+        <p><strong>Choose your city:</strong></p>
+        <div id="city-buttons" style="display:flex;flex-wrap:wrap;gap:.5rem"></div>
+        <div id="city-detail" style="border:1px solid currentColor;padding:1rem;margin-top:1rem"></div>
+        <form id="spot-form" style="margin-top:1rem;display:grid;gap:.6rem">
+          <label>Your name (optional) <input name="name" type="text" style="width:100%"></label>
+          <label>Spot type <select name="spot" style="width:100%"><option>Living room</option><option>Backyard</option><option>Rooftop</option><option>Workplace</option><option>Park / outdoor</option><option>Other</option></select></label>
+          <label>Preferred time window <input name="time" type="text" placeholder="e.g. afternoon, after 6pm" style="width:100%"></label>
+          <label>Anything Kaiser should know (access, space, sound) <textarea name="notes" rows="3" style="width:100%"></textarea></label>
+          <button type="submit" class="button button-primary">Build my spot request</button>
+        </form>
+        <div id="spot-summary" style="white-space:pre-wrap;margin-top:1rem"></div>
+        <p class="fine-print">This builds a request summary on this page only. It is not sent, booked, or paid for here. A set is confirmed only in writing, after timing and transit are checked — and no payment is requested until then.</p>
+      </div>
+      <div class="booking-stamp"><span>BOOKING</span><strong>REQUESTS ONLY</strong><small>NO PAYMENT COLLECTED ON THIS PAGE</small></div>
     </section>
   </main>
 
   <footer class="site-footer"><a class="wordmark" href="#top"><span class="mark">K</span><span>KAISER SOLZIE<small>THE 10 × 10 RAIL TOUR</small></span></a><div class="footer-meta"><span>KAISER SOLZIE / 10 × 10 / COAST TO COAST</span><span>Independent artist project · Not affiliated with Amtrak or Vans Warped Tour.</span><span>© <span id="year"></span> Kaiser Solzie</span></div><a class="back-top" href="#top">BACK TO TOP ↑</a></footer>
+
+<script>
+const CITIES=[
+["Nov 9","Chicago, IL"],["Nov 10","New York City, NY"],["Nov 11","Atlanta, GA"],["Nov 12","St. Pete / Tampa, FL"],["Nov 13","Orlando, FL"],["Nov 16","Dallas / Fort Worth, TX"],["Nov 17","Austin & San Antonio, TX"],["Nov 18","Los Angeles, CA"],["Nov 19","San Diego, CA"],["Nov 20","San Francisco / Bay Area, CA — 100th set finale"]
+];
+let selected=CITIES[0];
+const btnWrap=document.getElementById("city-buttons");
+const detail=document.getElementById("city-detail");
+function renderCity(){
+  detail.innerHTML="<h3>"+selected[0]+", 2026 — "+selected[1]+"</h3><p>10 one-on-one, 30-minute acoustic sets. 1 person per set. $10 per set, plus the 10-piece tour kit — payment only after written confirmation.</p><ol><li><strong>Pick your spot:</strong> living room, backyard, rooftop, workplace, or park in "+selected[1]+".</li><li><strong>Submit the request below:</strong> spot type, preferred time window, and access notes.</li><li><strong>Kaiser reviews it:</strong> timing and rail/transit are checked for that city day.</li><li><strong>Confirm in writing:</strong> set time, location, price, and kit are confirmed before any payment is requested.</li><li><strong>Showtime:</strong> Kaiser arrives, plays your set, and hands over your kit items.</li></ol><p><em>Nov 14–15, Orlando, is the Vans Warped Tour weekend — a public event, not a 10-by-10 set day.</em></p>";
+  btnWrap.querySelectorAll("button").forEach((b,i)=>{b.setAttribute("aria-pressed",String(CITIES[i]===selected));});
+}
+CITIES.forEach((c)=>{
+  const b=document.createElement("button"); b.type="button"; b.textContent=c[0]+" · "+c[1];
+  b.addEventListener("click",()=>{selected=c; renderCity();});
+  btnWrap.appendChild(b);
+});
+renderCity();
+document.getElementById("spot-form").addEventListener("submit",(e)=>{
+  e.preventDefault();
+  const f=new FormData(e.target);
+  document.getElementById("spot-summary").textContent="SPOT REQUEST (not sent, not booked)\nCity: "+selected[0]+", 2026 — "+selected[1]+"\nName: "+(f.get("name")||"—")+"\nSpot type: "+f.get("spot")+"\nPreferred time: "+(f.get("time")||"—")+"\nNotes: "+(f.get("notes")||"—")+"\n\nNext step: Kaiser reviews timing/transit for this city day and confirms in writing before any payment.";
+});
+</script>
   <script src="script.js"></script>
 </body>
 </html>
