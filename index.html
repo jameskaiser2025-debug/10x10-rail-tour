@@ -1,183 +1,127 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#11110f">
-  <meta name="description" content="Kaiser Solzie — The 10 by 10 Rail Tour. Ten cities, ten private acoustic sets per city, one seat at a time.">
-  <meta property="og:title" content="Kaiser Solzie — The 10 by 10 Rail Tour">
-  <meta property="og:description" content="One seat. One show. Ten cities. Follow the proposed coast-to-coast acoustic rail tour.">
-  <meta property="og:type" content="website">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <title>Kaiser Solzie — The 10 by 10 Rail Tour</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kaiser Solzie • The 10 by 10 Rail Tour</title>
+<meta name="description" content="Kaiser Solzie — The 10 by 10 Rail Tour. Ten cities, ten private acoustic sets per city, $10 per set. November 9–20, 2026.">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#E8DCBE;color:#1A1A1A;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
+.ticker{background:#1A1A1A;color:#F2E8CE;text-align:center;padding:.5rem;font-family:'Courier Prime',Courier,monospace;text-transform:uppercase;font-size:.85rem;border-bottom:3px solid #A63A2E}
+header{display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto;padding:1rem 1.25rem;border-bottom:2px solid #1A1A1A}
+header a{color:#1A1A1A;text-decoration:underline;text-transform:uppercase;font-size:.85rem;margin-left:1rem}
+.wrap{max-width:1100px;margin:0 auto;padding:0 1.25rem 3rem}
+.eyebrow{font-family:'Courier Prime',Courier,monospace;text-transform:uppercase;letter-spacing:.08em;color:#A63A2E}
+h1,h2,h3{font-family:'Oswald',Impact,sans-serif;text-transform:uppercase;line-height:1.05}
+h1{font-size:4rem;margin:.4rem 0}
+h1 span{color:#A63A2E}
+h2{font-size:2.4rem;margin:3rem 0 .5rem}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;margin-top:1.5rem}
+.hero-img,.poster{width:100%;height:auto;display:block;border:2px solid #1A1A1A;box-shadow:6px 6px 0 #1A1A1A}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);background:#F2E8CE;border:2px solid #1A1A1A;box-shadow:6px 6px 0 #1A1A1A;margin:2rem 0;text-align:center}
+.stats div{padding:1rem;border-left:2px dotted #999}
+.stats div:first-child{border-left:0}
+.stats strong{font-family:'Oswald',Impact,sans-serif;font-size:2.4rem;color:#A63A2E;display:block}
+.pill{display:inline-block;background:#1A1A1A;color:#F2E8CE;padding:.3rem .9rem;border-radius:20px;font-family:'Courier Prime',Courier,monospace;text-transform:uppercase;font-size:.85rem}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.card{background:#F2E8CE;border:2px solid #1A1A1A;box-shadow:6px 6px 0 #1A1A1A;padding:1.25rem}
+.card.red{background:#A63A2E;color:#F2E8CE}
+.card.red a{color:#F2E8CE}
+.btn{display:inline-block;padding:.8rem 1.3rem;background:#A63A2E;color:#fff;text-decoration:none;font-weight:800;text-transform:uppercase;box-shadow:4px 4px 0 #1A1A1A;margin:.4rem .3rem 0 0}
+.btn2{display:inline-block;padding:.8rem 1.3rem;border:2px solid #1A1A1A;color:#1A1A1A;text-decoration:none;font-weight:700;text-transform:uppercase;margin:.4rem .3rem 0 0}
+.btn-black{display:inline-block;padding:.5rem .9rem;background:#1A1A1A;color:#F2E8CE;text-decoration:none;font-weight:700;text-transform:uppercase;font-size:.85rem;box-shadow:3px 3px 0 #A63A2E}
+table{width:100%;border-collapse:collapse;margin:1rem 0;border:2px solid #1A1A1A}
+th{background:#1A1A1A;color:#F2E8CE;padding:.6rem .4rem;text-align:left;text-transform:uppercase;font-size:.85rem}
+td{padding:.6rem .4rem;border-bottom:1px solid #ccc;vertical-align:top}
+.city-btn{display:inline-block;margin:.25rem;padding:.5rem .8rem;border:2px solid #1A1A1A;text-decoration:none;color:#1A1A1A;font-size:.9rem}
+.fine{color:#555;font-size:.9rem}
+footer{border-top:2px solid #1A1A1A;text-align:center;padding:2rem 1rem}
+footer .banner{font-family:'Oswald',Impact,sans-serif;font-size:1.6rem;letter-spacing:.05em}
+@media(max-width:760px){.hero,.cards{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}h1{font-size:2.6rem}}
+</style>
 </head>
 <body>
-  <div class="announcement"><span class="pulse"></span> RAIL PASS DASH <span class="dot">•</span> NOV 9–20, 2026 <span class="dot">•</span> TEN CITIES <span class="dot">•</span> 100 PERSONAL SHOWS</div>
-  <header class="site-header">
-    <a class="wordmark" href="#top" aria-label="Kaiser Solzie home"><span class="mark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M8 5v30M9 20L30 5M15 20l16 15" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="25" cy="25" r="5" fill="none" stroke="currentColor" stroke-width="2"/></svg></span><span>KAISER SOLZIE<small>THE 10 × 10 RAIL TOUR</small></span></a>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">MENU <span>☰</span></button>
-    <div class="theme-switcher" role="group" aria-label="Choose color theme"><span>THEME</span><button type="button" data-theme-choice="industrial" aria-label="Industrial Neon Bodega" title="Industrial Neon Bodega"></button><button type="button" data-theme-choice="warped" aria-label="Warped Tour Sunburst" title="Warped Tour Sunburst"></button><button type="button" data-theme-choice="vinyl" aria-label="Vintage Vinyl and Amber" title="Vintage Vinyl and Amber"></button><button type="button" data-theme-choice="zine" aria-label="Street Punk Zine" title="Street Punk Zine"></button></div>
-    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
-      <a href="#ticket">The ticket</a><a href="#routing">Routing</a><a href="#sound">The sound</a><a href="#watch">Watch &amp; listen</a><a href="#posters">Posters</a><a class="nav-cta" href="#booking">Get the details ↗</a>
-    </nav>
-  </header>
+<div class="ticker">Rail Pass Dash • Nov 9–20 • Ten Cities • One Person Per Set • 100 Patrons Nationwide</div>
+<header><strong>Ⓚ KAISER SOLZIE</strong><nav><a href="#ticket">The Ticket</a><a href="#route">Routing</a><a href="#watch">The Sound</a></nav></header>
+<div class="wrap">
+<div class="hero"><div>
+<p class="eyebrow">✦ Coast-to-coast Amtrak edition ✦</p>
+<h1>Kaiser<br>Solzie<br><span>The 10 by 10<br>Rail Tour</span></h1>
+<p><strong>1 person per set. 10 sets per city. Times 10 cities.</strong></p>
+<p>Your living room, backyard, rooftop, or favorite spot. Just $10 for an individualized 30-minute acoustic set plus your 10-piece custom tour kit.</p>
+<p><a class="btn" href="booking.html">Book your private 1-on-1 slot →</a> <a href="#ticket">See what's in the ticket</a></p>
+</div><div><img class="hero-img" src="assets/posters-nov9-20/poster-large-nov9-20.jpg" alt="Original 10by10 poster: living room acoustic set with Amtrak night train"><p>A living-room show. One seat.</p></div></div>
+<p>November 9–20, 2026 • Locked dates</p>
+<div class="stats"><div><strong>10</strong>Cities nationwide</div><div><strong>10</strong>Individual sets per city</div><div><strong>1</strong>Person per private set</div><div><strong>$10</strong>Per set + 10-piece kit</div></div>
 
-  <main id="top">
-    <section class="hero section-wrap">
-      <div class="hero-copy">
-        <p class="eyebrow">COAST-TO-COAST / AMTRAK EDITION</p>
-        <h1>One seat.<br><span>One show.</span><br>Ten cities.</h1>
-        <p class="hero-lede">1 person per set. 10 sets per city. Times 10 cities.</p>
-        <p class="hero-body">Your living room, backyard, rooftop, or favorite spot. A personal 30-minute acoustic set from Kaiser Solzie — up close, unplugged, and made for you.</p>
-        <div class="hero-actions"><a class="button button-primary" href="#booking">Get tour details <span>↗</span></a><a class="text-link" href="#ticket">See what’s in the ticket ↓</a></div>
-        <p class="micro-note">Ticket: $10 · November 9–20, 2026.</p>
-      </div>
-      <div class="hero-art">
-        <div class="art-frame">
-          <div class="hero-illustration" role="img" aria-label="Original Kaiser Solzie 10by10 poster art">
-            <img src="assets/posters-nov9-20/poster-cover-nov9-20.jpg" alt="Original Kaiser Solzie 10by10 poster: DIY Punk Rock Home Tour, acoustic set in a living room with a train in the window" style="width:100%;height:auto;display:block">
-          </div>
-          <div class="art-caption"><span>LIVE / PERSONAL / IN TRANSIT</span><span>KS—010</span></div>
-        </div>
-        <div class="orbit orbit-one">100<br><small>SETS</small></div>
-        <div class="orbit orbit-two">10 × 10</div>
-      </div>
-    </section>
+<h2>Punch your ticket</h2>
+<h3>What your $10 ticket includes</h3>
+<p>One of 100 patrons nationwide. Be 1 of only 100 patrons nationwide to claim a once-in-a-lifetime mythical blip. Every $10 booking includes:</p>
+<img class="poster" src="assets/posters-nov9-20/poster-bundle-nov9-20.jpg" alt="Original 10by10 bundle poster">
+<h3>A show made for you — Not a crowd. Just you.</h3>
+<ul>
+<li><strong>Private 1-on-1 performance:</strong> A 30-minute customized acoustic set at the location you choose.</li>
+<li><strong>Live audio master:</strong> A recording of your personal session.</li>
+<li><strong>10-piece custom tour kit:</strong> Tour t-shirt, personalized ticket, zine, poster, pin pack, sticker pack, patch, pick tin, VIP pass, and USB cassette.</li>
+</ul>
 
-    <section class="stats section-wrap" aria-label="Tour format">
-      <div><strong>10</strong><span>CITIES NATIONWIDE</span></div><div><strong>10</strong><span>SETS PER CITY</span></div><div><strong>1</strong><span>PERSON PER SHOW</span></div><div><strong>$10</strong><span>PROPOSED TICKET</span></div>
-    </section>
+<h2>From your spot to showtime</h2>
+<h3>How to claim your 30-minute mythical blip</h3>
+<img class="poster" src="assets/posters-nov9-20/poster-howto-nov9-20.jpg" alt="Original poster: how to claim your 30-minute mythical blip">
+<ol>
+<li><strong>Submit your spot:</strong> Tell us your location (living room, backyard, rooftop, or workplace) and preferred time.</li>
+<li><strong>Simple vetting:</strong> Kaiser personally reviews and validates your spot so timing and transit align smoothly.</li>
+<li><strong>Confirm in writing before any payment:</strong> Final price, payment method, and schedule are confirmed in writing before any payment is requested. No payment is collected on this page.</li>
+<li><strong>Arrival day:</strong> Kaiser arrives on schedule, plays your personalized set, and hands over your 10 custom items.</li>
+</ol>
+<p>Pick your city, see its 5 booking steps, then Book it:</p>
+<p>
+<a class="city-btn" href="booking.html?city=Chicago%2C%20IL">Nov 9 · Chicago</a>
+<a class="city-btn" href="booking.html?city=New%20York%20City%2C%20NY">Nov 10 · New York City</a>
+<a class="city-btn" href="booking.html?city=Atlanta%2C%20GA">Nov 11 · Atlanta</a>
+<a class="city-btn" href="booking.html?city=St.%20Pete%20%2F%20Tampa%2C%20FL">Nov 12 · St. Pete / Tampa</a>
+<a class="city-btn" href="booking.html?city=Orlando%2C%20FL">Nov 13 · Orlando</a>
+<a class="city-btn" href="booking.html?city=Dallas%20%2F%20Fort%20Worth%2C%20TX">Nov 16 · Dallas / Fort Worth</a>
+<a class="city-btn" href="booking.html?city=Austin%20%26%20San%20Antonio%2C%20TX">Nov 17 · Austin &amp; San Antonio</a>
+<a class="city-btn" href="booking.html?city=Los%20Angeles%2C%20CA">Nov 18 · Los Angeles</a>
+<a class="city-btn" href="booking.html?city=San%20Diego%2C%20CA">Nov 19 · San Diego</a>
+<a class="city-btn" href="booking.html?city=San%20Francisco%20%2F%20Bay%20Area%2C%20CA">Nov 20 · San Francisco / Bay Area</a>
+</p>
 
-    <section id="ticket" class="ticket-section section-wrap">
-      <div class="section-heading"><p class="eyebrow">PUNCH YOUR TICKET / 01</p><h2>A show made<br><em>for you.</em></h2></div>
-      <div class="ticket-content">
-        <p class="intro">Not a crowd. Not a stage barrier. Just you, Kaiser, and thirty minutes of songs and stories in a place that means something to you.</p>
-        <div class="feature-grid">
-          <article class="feature"><span class="feature-no">01</span><h3>Private acoustic set</h3><p>A customized 30-minute, one-on-one performance at an agreed location.</p></article>
-          <article class="feature"><span class="feature-no">02</span><h3>Your live audio master</h3><p>A recording of your personal session, delivered after the performance.</p></article>
-          <article class="feature feature-wide"><span class="feature-no">03</span><div><h3>The 10-piece custom tour kit</h3><p>Tour T-shirt · Personalized ticket · Zine · Poster · Pin pack · Sticker pack · Patch · Pick tin · VIP pass · USB cassette.</p></div></article>
-        </div>
-        <img class="tour-kit-art" src="assets/posters-nov9-20/poster-bundle-nov9-20.jpg" alt="Original 10by10 bundle poster: the 10-piece custom tour kit" loading="lazy" style="width:100%;height:auto"><p class="fine-print">The $10 ticket and included items are the proposed tour offer. Final terms, fulfillment, and booking availability will be confirmed before payments are accepted.</p>
-      </div>
-    </section>
+<h2>The rail pass dash</h2>
+<h3>Tour routing &amp; slot availability</h3>
+<img class="poster" src="assets/posters-nov9-20/poster-map-nov9-20.jpg" alt="Original 10by10 rail tour map poster">
+<p>10 city stops / 100 private sets. November 9–20, 2026 is the locked date range. Set times, travel logistics, and set availability are still to be confirmed before payments are accepted.</p>
+<table>
+<tr><th>Date</th><th>City</th><th>Format</th><th>Action</th></tr>
+<tr><td>Nov 9</td><td>Chicago, IL</td><td>10 individual 1-on-1 sets</td><td><a href="booking.html?city=Chicago%2C%20IL">Book it ($10)</a></td></tr>
+<tr><td>Nov 10</td><td>New York City, NY</td><td>10 individual 1-on-1 sets</td><td><a href="booking.html?city=New%20York%20City%2C%20NY">Book it ($10)</a></td></tr>
+<tr><td>Nov 11</td><td>Atlanta, GA</td><td>10 individual 1-on-1 sets</td><td><a href="booking.html?city=Atlanta%2C%20GA">Book it ($10)</a></td></tr>
+<tr><td>Nov 12</td><td>St. Pete / Tampa, FL</td><td>10 individual 1-on-1 sets</td><td><a href="booking.html?city=St.%20Pete%20%2F%20Tampa%2C%20FL">Book it ($10)</a></td></tr>
+<tr><td>Nov 13</td><td>Orlando, FL</td><td>10 patron sets</td><td><a href="booking.html?city=Orlando%2C%20FL">Book it ($10)</a></td></tr>
+<tr><td>Nov 14–15</td><td>Orlando, FL</td><td>Vans Warped Tour</td><td>Public event</td></tr>
+<tr><td>Nov 16</td><td>Dallas / Fort Worth, TX</td><td>10 individual 1-on-1 sets</td><td><a href="booking.html?city=Dallas%20%2F%20Fort%20Worth%2C%20TX">Book it ($10)</a></td></tr>
+<tr><td>Nov 17</td><td>Austin &amp; San Antonio, TX</td><td>10 individual 1-on-1 sets</td><td><a href="booking.html?city=Austin%20%26%20San%20Antonio%2C%20TX">Book it ($10)</a></td></tr>
+<tr><td>Nov 18</td><td>Los Angeles, CA</td><td>10 individual 1-on-1 sets</td><td><a href="booking.html?city=Los%20Angeles%2C%20CA">Book it ($10)</a></td></tr>
+<tr><td>Nov 19</td><td>San Diego, CA</td><td>10 individual 1-on-1 sets</td><td><a href="booking.html?city=San%20Diego%2C%20CA">Book it ($10)</a></td></tr>
+<tr><td>Nov 20</td><td>San Francisco / Bay Area, CA (100th Set Finale)</td><td>10 individual 1-on-1 sets</td><td><a href="booking.html?city=San%20Francisco%20%2F%20Bay%20Area%2C%20CA">Book it ($10)</a></td></tr>
+</table>
 
-    <section id="routing" class="routing-section">
-      <div class="section-wrap">
-        <div class="routing-top"><div><p class="eyebrow">THE RAIL PASS DASH / 02</p><h2>Ten stops.<br><em>One long ride.</em></h2></div><p class="routing-intro">A coast-to-coast run built around rail travel, close-up performances, and the people who make a place feel like home.</p></div>
-        <div class="status-note"><span class="status-dot"></span><div><strong>November 9–20, 2026 — locked dates</strong><p>November 9–20, 2026 is the locked date range for this tour. Set times within each city day, travel logistics, and set availability are still to be confirmed before payments are accepted.</p></div></div>
-        <img class="route-art" src="assets/posters-nov9-20/poster-map-nov9-20.jpg" alt="Original 10by10 rail tour map poster" loading="lazy" style="width:100%;height:auto">
-        <div class="route-list">
-          <div class="route-row"><span class="route-date">NOV <b>09</b></span><span class="route-city">Chicago, IL</span><span class="route-type">10 private sets proposed</span><span class="route-status">DETAILS PENDING</span></div>
-          <div class="route-row"><span class="route-date">NOV <b>10</b></span><span class="route-city">New York City, NY</span><span class="route-type">10 private sets proposed</span><span class="route-status">DETAILS PENDING</span></div>
-          <div class="route-row"><span class="route-date">NOV <b>11</b></span><span class="route-city">Atlanta, GA</span><span class="route-type">10 private sets proposed</span><span class="route-status">DETAILS PENDING</span></div>
-          <div class="route-row"><span class="route-date">NOV <b>12</b></span><span class="route-city">St. Pete / Tampa, FL</span><span class="route-type">10 private sets proposed</span><span class="route-status">DETAILS PENDING</span></div>
-          <div class="route-row"><span class="route-date">NOV <b>13</b></span><span class="route-city">Orlando, FL</span><span class="route-type">10 private sets proposed</span><span class="route-status">DETAILS PENDING</span></div>
-          <div class="route-row"><span class="route-date">NOV <b>14–15</b></span><span class="route-city">Orlando, FL</span><span class="route-type">Warped Tour weekend concept</span><span class="route-status">UNCONFIRMED</span></div>
-          <div class="route-row"><span class="route-date">NOV <b>16</b></span><span class="route-city">Dallas / Fort Worth, TX</span><span class="route-type">10 private sets proposed</span><span class="route-status">DETAILS PENDING</span></div>
-          <div class="route-row"><span class="route-date">NOV <b>17</b></span><span class="route-city">Austin &amp; San Antonio, TX</span><span class="route-type">10 private sets proposed</span><span class="route-status">DETAILS PENDING</span></div>
-          <div class="route-row"><span class="route-date">NOV <b>18</b></span><span class="route-city">Los Angeles, CA</span><span class="route-type">10 private sets proposed</span><span class="route-status">DETAILS PENDING</span></div>
-          <div class="route-row"><span class="route-date">NOV <b>19</b></span><span class="route-city">San Diego, CA</span><span class="route-type">10 private sets proposed</span><span class="route-status">DETAILS PENDING</span></div>
-          <div class="route-row"><span class="route-date">NOV <b>20</b></span><span class="route-city">San Francisco / Bay Area, CA</span><span class="route-type">100th set finale concept</span><span class="route-status">DETAILS PENDING</span></div>
-        </div>
-      </div>
-    </section>
+<h2>Before the knock at your door</h2>
+<h3>Hear the sound</h3>
+<p>Listen before you commit. DIY punk rock and acoustic sessions from basements, backyards, and everywhere in between.</p>
+<img class="poster" src="assets/posters-nov9-20/poster-living-room-nov9-20.jpg" alt="Original poster: acoustic set in a living room with a train in the window">
+<p>Watch the archive CLIP 01 / 02</p>
+<div style="position:relative;padding-top:56.25%;max-width:720px;margin:0 auto"><iframe style="position:absolute;inset:0;width:100%;height:100%;border:0" src="https://www.youtube-nocookie.com/embed/ugyQeCp4PYo?rel=0" title="Kaiser Solzie archive clip" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<p><a class="btn" href="https://kaisersolzie28.bandcamp.com/album/this-ones-for-friends-and-family-acoustic-tales-of-years" target="_blank" rel="noopener noreferrer">Listen to the acoustic album ↗</a><a class="btn2" href="https://www.youtube.com/user/TheKaiserChannel" target="_blank" rel="noopener noreferrer">More on YouTube ↗</a></p>
 
-    <section class="how-section section-wrap"><img src="assets/posters-nov9-20/poster-howto-nov9-20.jpg" alt="Original poster: how to claim your 30-minute mythical blip" loading="lazy" style="width:100%;height:auto;max-width:640px">
-      <div class="section-heading"><p class="eyebrow">FROM YOUR SPOT TO SHOWTIME / 03</p><h2>How the ride<br><em>comes to you.</em></h2></div>
-      <div class="steps">
-        <article><span>01 / REACH OUT</span><h3>Tell us your spot</h3><p>Share your city, a possible location — living room, backyard, rooftop, or workplace — and the kind of set you have in mind.</p></article>
-        <article><span>02 / CHECK THE ROUTE</span><h3>Confirm the details</h3><p>We’ll review location, timing, accessibility, and rail/transit logistics together. A request is not a confirmed reservation.</p></article>
-        <article><span>03 / CONFIRM</span><h3>Get the green light</h3><p>Final price, payment method, schedule, and what’s included will be confirmed in writing before any payment is requested.</p></article>
-        <article><span>04 / SHOWTIME</span><h3>Make a memory</h3><p>When the route and booking are confirmed, Kaiser brings the songs — and the one-person audience gets the front row.</p></article>
-      </div>
-    </section>
-
-    <section id="sound" class="sound-section">
-      <div class="section-wrap sound-inner">
-        <div><p class="eyebrow">BEFORE THE KNOCK AT YOUR DOOR / 04</p><h2>Hear the<br><em>sound.</em></h2><p>DIY punk rock and acoustic sessions from basements, backyards, and everywhere in between.</p><a class="button button-outline" href="https://kaisersolzie28.bandcamp.com/album/this-ones-for-friends-and-family-acoustic-tales-of-years" target="_blank" rel="noopener noreferrer">Listen to the acoustic album ↗</a></div>
-        <div class="sound-card"><span class="sound-label">KAISER SOLZIE / BANDCAMP</span><div class="sound-art-row"><div class="vinyl-record" aria-label="Animated vinyl record graphic"><span></span></div><svg class="cassette-icon" viewBox="0 0 180 116" role="img" aria-label="Vintage cassette tape illustration"><rect x="8" y="8" width="164" height="100" rx="9" fill="none" stroke="currentColor" stroke-width="4"/><rect x="22" y="20" width="136" height="40" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="58" cy="40" r="12" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="122" cy="40" r="12" fill="none" stroke="currentColor" stroke-width="3"/><path d="M58 40h64M44 82h92M68 69l-8 13m52-13 8 13" stroke="currentColor" stroke-width="3" fill="none"/></svg></div><div class="vu-meter" role="img" aria-label="Animated 21-bar LED visualizer"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="sound-mark">KS<span>♪</span></div><p>THIS ONE’S FOR FRIENDS AND FAMILY</p><small>ACOUSTIC TALES OF YEARS</small></div>
-      </div>
-    </section>
-
-
-    <section id="watch" class="sound-section"><div class="section-wrap"><img src="assets/posters-nov9-20/poster-living-room-nov9-20.jpg" alt="Original poster: acoustic set in a living room with a train in the window" loading="lazy" style="width:100%;height:auto;max-width:640px"></div>
-      <div class="section-wrap sound-inner">
-        <div><p class="eyebrow">THE BACK STORY / 05</p><h2>Watch &amp;<br><em>listen.</em></h2><p>Before the knock at your door, see the archive clip and hear the acoustic songs — the DIY punk, Warped Tour, and Rochester back story behind the 10 by 10 sets.</p><p><a class="button button-outline" href="https://www.youtube.com/user/TheKaiserChannel" target="_blank" rel="noopener noreferrer">More on YouTube ↗</a></p><p><a class="button button-outline" href="https://kaisersolzie28.bandcamp.com/album/this-ones-for-friends-and-family-acoustic-tales-of-years" target="_blank" rel="noopener noreferrer">Stream the acoustic album on Bandcamp ↗</a></p></div>
-        <div class="sound-card"><span class="sound-label">WATCH / ARCHIVE CLIP</span><div style="position:relative;padding-top:56.25%"><iframe style="position:absolute;inset:0;width:100%;height:100%;border:0" src="https://www.youtube-nocookie.com/embed/ugyQeCp4PYo?rel=0" title="Kaiser Solzie archive clip" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div><p>ARCHIVE CLIP</p><small>STREAMING VIDEO · AUDIO PLAYS IN THE PLAYER ABOVE</small></div>
-      </div>
-    </section>
-
-
-    <section id="posters" class="sound-section">
-      <div class="section-wrap">
-        <p class="eyebrow">ORIGINAL ARTWORK</p><h2>The posters,<br><em>as made.</em></h2>
-        <p>These are Kaiser's original 10by10 posters, updated with a locked-dates banner: <strong>November 9–20, 2026</strong>. The original artwork underneath is unchanged — any Nov 2–15 dates still printed inside the posters themselves are superseded by that banner and by this page's route list.</p>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem">
-          <a href="assets/posters-nov9-20/poster-cover-nov9-20.jpg"><img src="assets/posters-nov9-20/poster-cover-nov9-20.jpg" alt="10by10 Tour cover poster" style="width:100%;height:auto"></a>
-          <a href="assets/posters-nov9-20/poster-map-nov9-20.jpg"><img src="assets/posters-nov9-20/poster-map-nov9-20.jpg" alt="10by10 Rail Tour map poster" style="width:100%;height:auto"></a>
-          <a href="assets/posters-nov9-20/poster-living-room-nov9-20.jpg"><img src="assets/posters-nov9-20/poster-living-room-nov9-20.jpg" alt="Amtrak Rail Pass Dash poster, living room and train" style="width:100%;height:auto"></a>
-          <a href="assets/posters-nov9-20/poster-bundle-nov9-20.jpg"><img src="assets/posters-nov9-20/poster-bundle-nov9-20.jpg" alt="10by10 bundle poster" style="width:100%;height:auto"></a>
-          <a href="assets/posters-nov9-20/poster-howto-nov9-20.jpg"><img src="assets/posters-nov9-20/poster-howto-nov9-20.jpg" alt="How to claim your 30-minute mythical blip poster" style="width:100%;height:auto"></a>
-          <a href="assets/posters-nov9-20/poster-mythical-nov9-20.jpg"><img src="assets/posters-nov9-20/poster-mythical-nov9-20.jpg" alt="10by10 Rail Pass Dash mythical blip poster" style="width:100%;height:auto"></a>
-          <a href="assets/posters-nov9-20/poster-large-nov9-20.jpg"><img src="assets/posters-nov9-20/poster-large-nov9-20.jpg" alt="Large 10by10 poster with living room and Amtrak night train" style="width:100%;height:auto"></a>
-        </div>
-        <p class="fine-print">Tap any poster to open it full-size. Poster "Book Now" text is artwork only — booking on this page is requests only, with no payment collected here.</p>
-      </div>
-    </section>
-
-    <section id="booking" class="booking-section section-wrap"><img src="assets/posters-nov9-20/poster-mythical-nov9-20.jpg" alt="Original 10by10 mythical blip poster" loading="lazy" style="width:100%;height:auto;max-width:640px">
-      <p class="eyebrow">KEEP YOUR EYES ON THE TRACKS / 05</p>
-      <h2>The next stop<br>starts <em>with you.</em></h2>
-      <p class="booking-copy">November 9–20, 2026 is the locked date range. Pick your city below to see its booking steps. A request is not a confirmed reservation, and no payment is collected on this page until the set is confirmed in writing.</p>
-      <div id="city-booking" style="text-align:left;max-width:720px;margin:1.5rem auto 0">
-        <p><strong>Choose your city:</strong></p>
-        <div id="city-buttons" style="display:flex;flex-wrap:wrap;gap:.5rem"></div>
-        <div id="city-detail" style="border:1px solid currentColor;padding:1rem;margin-top:1rem"></div>
-        <form id="spot-form" style="margin-top:1rem;display:grid;gap:.6rem">
-          <label>Your name (optional) <input name="name" type="text" style="width:100%"></label>
-          <label>Spot type <select name="spot" style="width:100%"><option>Living room</option><option>Backyard</option><option>Rooftop</option><option>Workplace</option><option>Park / outdoor</option><option>Other</option></select></label>
-          <label>Preferred time window <input name="time" type="text" placeholder="e.g. afternoon, after 6pm" style="width:100%"></label>
-          <label>Anything Kaiser should know (access, space, sound) <textarea name="notes" rows="3" style="width:100%"></textarea></label>
-          <button type="submit" class="button button-primary">Build my spot request</button>
-        </form>
-        <p><a id="city-book-link" class="button button-primary" href="booking.html">Book it — $10</a></p><div id="spot-summary" style="white-space:pre-wrap;margin-top:1rem"></div>
-        <p class="fine-print">This builds a request summary on this page only. It is not sent, booked, or paid for here. A set is confirmed only in writing, after timing and transit are checked — and no payment is requested until then.</p>
-      </div>
-      <div class="booking-stamp"><span>BOOKING</span><strong>REQUESTS ONLY</strong><small>NO PAYMENT COLLECTED ON THIS PAGE</small></div>
-    </section>
-  </main>
-
-  <footer class="site-footer"><a class="wordmark" href="#top"><span class="mark">K</span><span>KAISER SOLZIE<small>THE 10 × 10 RAIL TOUR</small></span></a><div class="footer-meta"><span>KAISER SOLZIE / 10 × 10 / COAST TO COAST</span><span>Independent artist project · Not affiliated with Amtrak or Vans Warped Tour.</span><span>© <span id="year"></span> Kaiser Solzie</span></div><a class="back-top" href="#top">BACK TO TOP ↑</a></footer>
-
-<script>
-const CITIES=[
-["Nov 9","Chicago, IL"],["Nov 10","New York City, NY"],["Nov 11","Atlanta, GA"],["Nov 12","St. Pete / Tampa, FL"],["Nov 13","Orlando, FL"],["Nov 16","Dallas / Fort Worth, TX"],["Nov 17","Austin & San Antonio, TX"],["Nov 18","Los Angeles, CA"],["Nov 19","San Diego, CA"],["Nov 20","San Francisco / Bay Area, CA — 100th set finale"]
-];
-let selected=CITIES[0];
-const btnWrap=document.getElementById("city-buttons");
-const detail=document.getElementById("city-detail");
-function renderCity(){
-  detail.innerHTML="<h3>"+selected[0]+", 2026 — "+selected[1]+"</h3><p>10 one-on-one, 30-minute acoustic sets. 1 person per set. $10 per set, plus the 10-piece tour kit — payment only after written confirmation.</p><ol><li><strong>Pick your spot:</strong> living room, backyard, rooftop, workplace, or park in "+selected[1]+".</li><li><strong>Submit the request below:</strong> spot type, preferred time window, and access notes.</li><li><strong>Kaiser reviews it:</strong> timing and rail/transit are checked for that city day.</li><li><strong>Confirm in writing:</strong> set time, location, price, and kit are confirmed before any payment is requested.</li><li><strong>Showtime:</strong> Kaiser arrives, plays your set, and hands over your kit items.</li></ol><p><em>Nov 14–15, Orlando, is the Vans Warped Tour weekend — a public event, not a 10-by-10 set day.</em></p>";
-  btnWrap.querySelectorAll("button").forEach((b,i)=>{b.setAttribute("aria-pressed",String(CITIES[i]===selected));});
-  const book=document.getElementById("city-book-link");
-  if(book){book.href="booking.html?city="+encodeURIComponent(selected[1])+"&date="+encodeURIComponent(selected[0]); book.textContent="Book it — "+selected[1]+" · $10";}
-}
-CITIES.forEach((c)=>{
-  const b=document.createElement("button"); b.type="button"; b.textContent=c[0]+" · "+c[1];
-  b.addEventListener("click",()=>{selected=c; renderCity();});
-  btnWrap.appendChild(b);
-});
-renderCity();
-document.getElementById("spot-form").addEventListener("submit",(e)=>{
-  e.preventDefault();
-  const f=new FormData(e.target);
-  document.getElementById("spot-summary").textContent="SPOT REQUEST (not sent, not booked)\nCity: "+selected[0]+", 2026 — "+selected[1]+"\nName: "+(f.get("name")||"—")+"\nSpot type: "+f.get("spot")+"\nPreferred time: "+(f.get("time")||"—")+"\nNotes: "+(f.get("notes")||"—")+"\n\nNext step: Kaiser reviews timing/transit for this city day and confirms in writing before any payment.";
-});
-</script>
-  <script src="script.js"></script>
+<h2>Original artwork</h2>
+<p>The posters, as made — updated with a locked-dates banner: November 9–20, 2026. Original artwork underneath is unchanged; any Nov 2–15 dates printed inside the posters are superseded by that banner and by the route table above.</p>
+<img class="poster" src="assets/posters-nov9-20/poster-cover-nov9-20.jpg" alt="Original 10by10 tour cover poster">
+<img class="poster" src="assets/posters-nov9-20/poster-mythical-nov9-20.jpg" alt="Original 10by10 mythical blip poster">
+<p class="fine">A request is not a confirmed reservation, and no payment is collected on this page until the set is confirmed in writing. Poster “Book Now” text is artwork only — use the Book it links above, which go to the booking portal.</p>
+<p><a class="btn" href="booking.html">Book it — $10</a></p>
+</div>
 </body>
 </html>
