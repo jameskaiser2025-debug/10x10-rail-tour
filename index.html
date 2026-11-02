@@ -1,167 +1,644 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kaiser Solzie • The 10 by 10 Rail Tour</title>
-<meta name="description" content="Kaiser Solzie — The 10 by 10 Rail Tour. Ten cities, ten private acoustic sets per city, $10 per set. November 9–20, 2026.">
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
-<style>
-*{box-sizing:border-box} body{overflow-x:hidden;margin:0;background:#E8D9A8;color:#111;font-family:"Courier Prime",Courier,monospace}
-.page-frame{max-width:1100px;margin:0 auto;background:#F7E9C3;border:3px solid #111;outline:3px double #111;outline-offset:6px;padding:1.25rem}
-h1,h2,h3{font-family:Oswald,Arial,sans-serif;text-transform:uppercase;letter-spacing:.02em}
-.masthead{text-align:center}
-.masthead h1{font-size:clamp(2.6rem,9vw,6rem);line-height:.9;margin:.3rem 0}
-.stars{font-size:1.4rem;letter-spacing:.3em}
-.gold-bar{background:#C9A227;color:#111;font-family:Oswald,Arial,sans-serif;font-weight:700;text-transform:uppercase;text-align:center;padding:.6rem;border:2px solid #111;margin:1rem 0}
-.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:1.5rem;align-items:start}
-@media(max-width:760px){.hero-grid{grid-template-columns:1fr}}
-.hero-img{width:100%;max-width:520px;height:auto;display:block;border:2px solid #111;box-shadow:6px 6px 0 #111;margin:0 auto}
-.poster{width:100%;max-width:620px;height:auto;display:block;border:2px solid #111;box-shadow:6px 6px 0 #111;margin:1rem auto}
-a{color:#111}
-.btn,.city-btn,.book-btn{display:inline-block;margin:.25rem;padding:.7rem 1rem;border:2px solid #111;background:#A63A2E;color:#fff;text-decoration:none;font-family:Oswald,Arial,sans-serif;font-weight:700;text-transform:uppercase;box-shadow:4px 4px 0 #111;cursor:pointer}
-.city-btn{background:#F2E8CE;color:#111;font:inherit;font-family:Oswald,Arial,sans-serif}
-.city-btn.active{background:#111;color:#F7E9C3}
-table{width:100%;border-collapse:collapse;background:#F2E8CE}
-th{background:#111;color:#F7E9C3;padding:.6rem;text-align:left}
-td{border:1px solid #111;padding:.5rem}
-.card{border:2px solid #111;background:#F2E8CE;padding:1rem;box-shadow:4px 4px 0 #111}
-.ticker{background:#111;color:#F7E9C3;text-align:center;padding:.5rem;font-weight:700;text-transform:uppercase}
-.footer-bar{background:#111;color:#F7E9C3;text-align:center;padding:1rem;font-family:Oswald,Arial,sans-serif;text-transform:uppercase}
-.price-badge{display:inline-block;background:#A63A2E;color:#fff;border:2px solid #111;padding:.4rem .8rem;font-family:Oswald,Arial,sans-serif;font-weight:700;transform:rotate(-6deg)}
-.share-fab{position:fixed;right:18px;bottom:18px;z-index:9999}
-.share-btn{background:#A63A2E;color:#fff;border:2px solid #111;box-shadow:4px 4px 0 #111;padding:.9rem 1.1rem;font-weight:800;cursor:pointer;text-transform:uppercase}
-.share-panel{display:none;background:#F2E8CE;border:2px solid #111;box-shadow:4px 4px 0 #111;padding:.8rem;margin-bottom:.6rem;width:240px;text-align:left}
-.share-panel.open{display:block}
-.share-panel a{display:block;color:#111;padding:.4rem 0;text-decoration:underline}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAISER SOLZIE'S 10by10 TOUR | 10 Cities • 10 Shows Each • $10 Shows</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Rye, Anton, Space Grotesk, Special Elite -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bungee&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Oswald:wght@500;700&family=Special+Elite&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            poster: {
+              cream: '#f9f3dd',
+              aged: '#efe2c3',
+              darkCream: '#dfcfab',
+              ink: '#111111',
+              red: '#be2623',
+              redDark: '#991b19',
+              gold: '#e5aa2e',
+              goldDark: '#c98a12',
+              teal: '#2d6a6c',
+              blue: '#1f3c58',
+              rust: '#bd532f'
+            }
+          },
+          fontFamily: {
+            headline: ['"Anton"', 'sans-serif'],
+            woodcut: ['"Oswald"', 'sans-serif'],
+            typewriter: ['"Courier Prime"', 'monospace'],
+            zine: ['"Special Elite"', 'cursive'],
+            bungee: ['"Bungee"', 'sans-serif']
+          },
+          boxShadow: {
+            'punk': '4px 4px 0px #111111',
+            'punk-lg': '7px 7px 0px #111111',
+            'punk-xl': '10px 10px 0px #111111',
+            'punk-red': '5px 5px 0px #be2623',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Vintage Paper & Comic Texture Overlays */
+    body {
+      background-color: #f6eed5;
+      background-image: 
+        radial-gradient(#d6c29a 0.75px, transparent 0.75px),
+        linear-gradient(to bottom, rgba(246, 238, 213, 0.95), rgba(239, 226, 195, 0.98));
+      background-size: 16px 16px, 100% 100%;
+      color: #111111;
+    }
+
+    /* Half-tone comic dot subtle overlay */
+    .halftone {
+      background-image: radial-gradient(#111111 12%, transparent 13%);
+      background-size: 6px 6px;
+      opacity: 0.08;
+    }
+
+    /* Starburst & Jagged Badges */
+    .starburst-badge {
+      clip-path: polygon(
+        100% 50%, 93% 62%, 97% 76%, 84% 83%, 82% 97%, 68% 97%, 62% 100%, 
+        50% 93%, 38% 100%, 32% 97%, 18% 97%, 16% 83%, 3% 76%, 7% 62%, 
+        0% 50%, 7% 38%, 3% 24%, 16% 17%, 18% 3%, 32% 3%, 38% 0%, 
+        50% 7%, 62% 0%, 68% 3%, 82% 3%, 84% 17%, 97% 24%, 93% 38%
+      );
+    }
+
+    /* Woodblock print border */
+    .poster-outer-frame {
+      border: 4px solid #111111;
+      outline: 2px solid #111111;
+      outline-offset: 5px;
+    }
+
+    /* Custom Scrollbar for urban zine feel */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #efe2c3;
+      border-left: 2px solid #111;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #be2623;
+      border: 2px solid #111;
+    }
+
+    /* Retro tape accent */
+    .tape-accent {
+      background: rgba(235, 225, 185, 0.75);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+      transform: rotate(-3deg);
+    }
+    
+    .tape-accent-right {
+      background: rgba(235, 225, 185, 0.75);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+      transform: rotate(3deg);
+    }
+
+    /* Comic panel frame */
+    .comic-frame {
+      border: 3px solid #111111;
+      box-shadow: 4px 4px 0px #111111;
+      background: #fffdf5;
+    }
+
+    @keyframes pulse-subtle {
+      0%, 100% { transform: scale(1) rotate(-5deg); }
+      50% { transform: scale(1.04) rotate(-3deg); }
+    }
+    .badge-float {
+      animation: pulse-subtle 4s ease-in-out infinite;
+    }
+  </style>
 </head>
-<body>
-<div class="page-frame">
-<header class="masthead"><h1>Kaiser Solzie&rsquo;s<br>10by10</h1><div class="stars">★ ★ ★ ★ 10by10 ★ ★ ★ ★</div><div class="gold-bar">10 special custom sets per city &bull; in 10 cities!</div><p><span class="price-badge">$10 per set</span> &nbsp; 100 private 30-minute sets &nbsp; Nov 9&ndash;20, 2026 &nbsp; Coast to coast</p></header>
+<body class="font-typewriter selection:bg-poster-gold selection:text-poster-ink min-h-screen">
 
-<div class="ticker">Rail Pass Dash • Nov 9–20 • Ten Cities • One Person Per Set • 100 Patrons Nationwide</div>
-<header><strong>Ⓚ KAISER SOLZIE</strong><nav><a href="#ticket">The Ticket</a><a href="#route">Routing</a><a href="#watch">The Sound</a></nav></header>
-<div class="wrap">
-<div class="hero"><div>
-<p class="eyebrow">✦ Coast-to-coast Amtrak edition ✦</p>
-<h1>Kaiser<br>Solzie<br><span>The 10 by 10<br>Rail Tour</span></h1>
-<p><strong>1 person per set. 10 sets per city. Times 10 cities.</strong></p>
-<p>Your living room, backyard, rooftop, or favorite spot. Just $10 for an individualized 30-minute acoustic set plus your 10-piece custom tour kit.</p>
-<p><a class="btn" href="booking.html">Book your private 1-on-1 slot →</a> <a href="#ticket">See what's in the ticket</a></p>
-</div><div><img class="hero-img" src="assets/new-nov9-20/poster-clean-nov9-20.jpg" alt="Updated Kaiser Solzie 10by10 poster, Nov 9-20, 2026"><p>A living-room show. One seat.</p></div></div>
-<p>November 9–20, 2026 • Locked dates • Poster artwork is style reference only</p>
-<div class="stats"><div><strong>10</strong>Cities nationwide</div><div><strong>10</strong>Individual sets per city</div><div><strong>1</strong>Person per private set</div><div><strong>$10</strong>Per set + 10-piece kit</div></div>
+  <!-- Top Sticky Announcement Bar -->
+  <div class="bg-poster-ink text-poster-cream py-2 px-4 border-b-2 border-poster-ink text-center text-xs sm:text-sm font-zine tracking-wider flex items-center justify-center gap-3">
+    <span class="inline-block w-2.5 h-2.5 rounded-full bg-poster-red animate-ping"></span>
+    <span>⚡ STRICTLY 10 PATRON SLOTS PER CITY • YOU OWN 100% OF YOUR LIVE RECORDING RIGHTS • ONLY $10</span>
+    <span class="inline-block w-2.5 h-2.5 rounded-full bg-poster-red animate-ping hidden sm:inline-block"></span>
+  </div>
 
-<h2 id="ticket">Punch your ticket</h2>
-<h3>What your $10 ticket includes</h3>
-<p>One of 100 patrons nationwide. Be 1 of only 100 patrons nationwide to claim a once-in-a-lifetime mythical blip. Every $10 booking includes:</p>
-<img class="poster" src="assets/attached-nov9-20/poster-bundle-nov9-20.jpg" alt="Original 10by10 bundle poster">
-<h3>A show made for you — Not a crowd. Just you.</h3>
-<ul>
-<li><strong>Private 1-on-1 performance:</strong> A 30-minute customized acoustic set at the location you choose.</li>
-<li><strong>Live audio master:</strong> A recording of your personal session.</li>
-<li><strong>10-piece custom tour kit:</strong> Tour t-shirt, personalized ticket, zine, poster, pin pack, sticker pack, patch, pick tin, VIP pass, and USB cassette.</li>
-</ul>
+  <!-- MAIN POSTER CONTAINER -->
+  <main class="max-w-6xl mx-auto my-4 sm:my-8 px-3 sm:px-6">
+    <div class="bg-poster-cream poster-outer-frame relative p-4 sm:p-8 rounded-sm shadow-punk-xl overflow-hidden">
+      
+      <!-- Four Corner Vintage $10 Seal Badges -->
+      <div class="absolute -top-3 -left-3 z-30 badge-float">
+        <div class="starburst-badge bg-poster-red text-poster-cream w-16 h-16 sm:w-20 sm:h-20 flex flex-col items-center justify-center shadow-lg transform -rotate-12">
+          <span class="font-headline text-lg sm:text-2xl leading-none font-black">$10</span>
+          <span class="text-[9px] uppercase font-bold tracking-tighter">PER SET</span>
+        </div>
+      </div>
 
-<h2>From your spot to showtime</h2>
-<h3>How to claim your 30-minute mythical blip</h3>
-<img class="poster" src="assets/attached-nov9-20/poster-howto-nov9-20.jpg" alt="Original poster: how to claim your 30-minute mythical blip">
-<ol>
-<li><strong>Submit your spot:</strong> Tell us your location (living room, backyard, rooftop, or workplace) and preferred time.</li>
-<li><strong>Simple vetting:</strong> Kaiser personally reviews and validates your spot so timing and transit align smoothly.</li>
-<li><strong>Confirm in writing before any payment:</strong> Final price, payment method, and schedule are confirmed in writing before any payment is requested. No payment is collected on this page.</li>
-<li><strong>Arrival day:</strong> Kaiser arrives on schedule, plays your personalized set, and hands over your 10 custom items.</li>
-</ol>
-<p>Pick your city, see its 5 booking steps, then Book it:</p>
-<p>
-<a class="city-btn" href="booking.html?city=Chicago%2C%20IL">Nov 9 · Chicago</a>
-<a class="city-btn" href="booking.html?city=New%20York%20City%2C%20NY">Nov 10 · New York City</a>
-<a class="city-btn" href="booking.html?city=Atlanta%2C%20GA">Nov 11 · Atlanta</a>
-<a class="city-btn" href="booking.html?city=St.%20Pete%20%2F%20Tampa%2C%20FL">Nov 12 · St. Pete / Tampa</a>
-<a class="city-btn" href="booking.html?city=Orlando%2C%20FL">Nov 13 · Orlando</a>
-<a class="city-btn" href="booking.html?city=Dallas%20%2F%20Fort%20Worth%2C%20TX">Nov 16 · Dallas / Fort Worth</a>
-<a class="city-btn" href="booking.html?city=Austin%20%26%20San%20Antonio%2C%20TX">Nov 17 · Austin &amp; San Antonio</a>
-<a class="city-btn" href="booking.html?city=Los%20Angeles%2C%20CA">Nov 18 · Los Angeles</a>
-<a class="city-btn" href="booking.html?city=San%20Diego%2C%20CA">Nov 19 · San Diego</a>
-<a class="city-btn" href="booking.html?city=San%20Francisco%20%2F%20Bay%20Area%2C%20CA">Nov 20 · San Francisco / Bay Area</a>
-</p>
+      <div class="absolute -top-3 -right-3 z-30">
+        <div class="starburst-badge bg-poster-red text-poster-cream w-16 h-16 sm:w-20 sm:h-20 flex flex-col items-center justify-center shadow-lg transform rotate-12">
+          <span class="font-headline text-lg sm:text-2xl leading-none font-black">$10</span>
+          <span class="text-[9px] uppercase font-bold tracking-tighter">FULL KIT</span>
+        </div>
+      </div>
 
+      <!-- MAIN HEADER BLOCK -->
+      <header class="text-center pt-8 pb-4 relative border-b-4 border-poster-ink">
+        <div class="flex items-center justify-center gap-2 sm:gap-4 text-poster-ink mb-1 text-base sm:text-2xl font-black">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          <span class="font-woodcut text-sm sm:text-lg uppercase tracking-widest px-2 bg-poster-gold border-2 border-poster-ink shadow-punk">COAST TO COAST DIRECT DELIVERY</span>
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
 
-<h2>Pick your city — booking steps</h2>
-<p>Choose a city to see its 5 booking steps, then Book it.</p>
-<div id="city-buttons" style="display:flex;flex-wrap:wrap;gap:.5rem"></div>
-<div id="city-detail" class="card" style="margin-top:1rem"></div>
-<script>
-const CITIES=[["Nov 9","Chicago, IL"],["Nov 10","New York City, NY"],["Nov 11","Atlanta, GA"],["Nov 12","St. Pete / Tampa, FL"],["Nov 13","Orlando, FL"],["Nov 16","Dallas / Fort Worth, TX"],["Nov 17","Austin & San Antonio, TX"],["Nov 18","Los Angeles, CA"],["Nov 19","San Diego, CA"],["Nov 20","San Francisco / Bay Area, CA"]];
-const wrap=document.getElementById("city-buttons"), detail=document.getElementById("city-detail");
-function show(c){detail.innerHTML="<h3>"+c[0]+", 2026 — "+c[1]+"</h3><ol><li>Pick your spot — living room, backyard, rooftop, workplace, or park.</li><li>Submit your request in the Book it portal.</li><li>Kaiser reviews timing and transit for that city day.</li><li>Confirm in writing before any payment is requested.</li><li>Showtime — 30-minute one-on-one set, plus the 10-piece kit.</li></ol><p><a class=\"btn\" href=\"booking.html?city="+encodeURIComponent(c[1])+"\">Book it — "+c[1]+" · $10</a></p><p class=\"fine\">Nov 14–15, Orlando, is the Vans Warped Tour public weekend, not a set day.</p>";}
-CITIES.forEach(c=>{const b=document.createElement("button"); b.className="city-btn"; b.textContent=c[0]+" · "+c[1]; b.onclick=()=>show(c); wrap.appendChild(b);});
-show(CITIES[0]);
-</script>
-<h2 id="route">The rail pass dash</h2>
-<h3>Tour routing &amp; slot availability</h3>
-<img class="poster" src="assets/attached-nov9-20/poster-map-nov9-20.jpg" alt="Original 10by10 rail tour map poster">
-<p>10 city stops / 100 private sets. November 9–20, 2026 is the locked date range. Set times, travel logistics, and set availability are still to be confirmed before payments are accepted.</p>
-<table>
-<tr><th>Date</th><th>City</th><th>Format</th><th>Action</th></tr>
-<tr><td>Nov 9</td><td>Chicago, IL</td><td>10 individual 1-on-1 sets</td><td><a href="booking.html?city=Chicago%2C%20IL">Book it ($10)</a></td></tr>
-<tr><td>Nov 10</td><td>New York City, NY</td><td>10 individual 1-on-1 sets</td><td><a href="booking.html?city=New%20York%20City%2C%20NY">Book it ($10)</a></td></tr>
-<tr><td>Nov 11</td><td>Atlanta, GA</td><td>10 individual 1-on-1 sets</td><td><a href="booking.html?city=Atlanta%2C%20GA">Book it ($10)</a></td></tr>
-<tr><td>Nov 12</td><td>St. Pete / Tampa, FL</td><td>10 individual 1-on-1 sets</td><td><a href="booking.html?city=St.%20Pete%20%2F%20Tampa%2C%20FL">Book it ($10)</a></td></tr>
-<tr><td>Nov 13</td><td>Orlando, FL</td><td>10 patron sets</td><td><a href="booking.html?city=Orlando%2C%20FL">Book it ($10)</a></td></tr>
-<tr><td>Nov 14–15</td><td>Orlando, FL</td><td>Vans Warped Tour</td><td>Public event</td></tr>
-<tr><td>Nov 16</td><td>Dallas / Fort Worth, TX</td><td>10 individual 1-on-1 sets</td><td><a href="booking.html?city=Dallas%20%2F%20Fort%20Worth%2C%20TX">Book it ($10)</a></td></tr>
-<tr><td>Nov 17</td><td>Austin &amp; San Antonio, TX</td><td>10 individual 1-on-1 sets</td><td><a href="booking.html?city=Austin%20%26%20San%20Antonio%2C%20TX">Book it ($10)</a></td></tr>
-<tr><td>Nov 18</td><td>Los Angeles, CA</td><td>10 individual 1-on-1 sets</td><td><a href="booking.html?city=Los%20Angeles%2C%20CA">Book it ($10)</a></td></tr>
-<tr><td>Nov 19</td><td>San Diego, CA</td><td>10 individual 1-on-1 sets</td><td><a href="booking.html?city=San%20Diego%2C%20CA">Book it ($10)</a></td></tr>
-<tr><td>Nov 20</td><td>San Francisco / Bay Area, CA (100th Set Finale)</td><td>10 individual 1-on-1 sets</td><td><a href="booking.html?city=San%20Francisco%20%2F%20Bay%20Area%2C%20CA">Book it ($10)</a></td></tr>
-</table>
+        <h1 class="font-headline text-5xl sm:text-7xl md:text-8xl lg:text-9xl tracking-tight text-poster-ink uppercase leading-none mt-2 drop-shadow-[3px_3px_0px_#dfcfab]">
+          KAISER SOLZIE'S
+        </h1>
+        
+        <div class="flex items-center justify-center gap-4 my-2">
+          <div class="h-1 bg-poster-ink flex-1 max-w-[120px] hidden sm:block"></div>
+          <span class="font-headline text-4xl sm:text-6xl text-poster-red px-4 tracking-normal uppercase bg-poster-cream border-2 border-poster-ink shadow-punk">
+            10 by 10
+          </span>
+          <div class="h-1 bg-poster-ink flex-1 max-w-[120px] hidden sm:block"></div>
+        </div>
 
-<h2 id="watch">Before the knock at your door</h2>
-<h3>Hear the sound</h3>
-<p>Listen before you commit. DIY punk rock and acoustic sessions from basements, backyards, and everywhere in between.</p>
-<img class="poster" src="assets/attached-nov9-20/poster-living-room-nov9-20.jpg" alt="Original poster: acoustic set in a living room with a train in the window">
-<p>Watch the archive CLIP 01 / 02</p>
-<div style="position:relative;padding-top:56.25%;max-width:720px;margin:0 auto"><iframe style="position:absolute;inset:0;width:100%;height:100%;border:0" src="https://www.youtube-nocookie.com/embed/ugyQeCp4PYo?rel=0" title="Kaiser Solzie archive clip" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-<p><a class="btn" href="https://kaisersolzie28.bandcamp.com/album/this-ones-for-friends-and-family-acoustic-tales-of-years" target="_blank" rel="noopener noreferrer">Listen to the acoustic album ↗</a><a class="btn2" href="https://www.youtube.com/user/TheKaiserChannel" target="_blank" rel="noopener noreferrer">More on YouTube ↗</a></p>
+        <!-- Subheader Ribbon -->
+        <div class="bg-poster-gold border-4 border-poster-ink p-2 sm:p-3 max-w-4xl mx-auto my-3 shadow-punk">
+          <h2 class="font-woodcut text-lg sm:text-2xl md:text-3xl text-poster-ink uppercase font-bold tracking-wider m-0">
+            ★ 10 SPECIAL CUSTOM SETS PER CITY • IN 10 CITIES! ★
+          </h2>
+        </div>
 
-<h2>Earlier artwork — style reference only</h2>
-<p>These attached posters are used for style and reference only. The tour dates that count are the updated locked dates on this page: <strong>November 9–20, 2026</strong>, as listed in the route table above. Do not use any dates printed inside the poster artwork itself — the banner on each poster and the route table above are the updated dates.</p>
-<img class="poster" src="assets/attached-nov9-20/poster-cover-nov9-20.jpg" alt="Original 10by10 tour cover poster">
-<img class="poster" src="assets/attached-nov9-20/poster-mythical-nov9-20.jpg" alt="Original 10by10 mythical blip poster">
-<h3>Updated Nov 9–20 poster</h3><p>This clean poster lists the updated Nov 9–20, 2026 route: Nov 9 Chicago, Nov 10 NYC, Nov 11 Atlanta, Nov 12 St. Pete, Nov 13 Orlando, Nov 14–15 Orlando Warped, Nov 16 Dallas, Nov 17 Austin &amp; San Antonio, Nov 18 Los Angeles, Nov 19 San Diego, Nov 20 San Francisco.</p><img class="poster" src="assets/new-nov9-20/poster-clean-nov9-20.jpg" alt="Updated Kaiser Solzie 10by10 poster with Nov 9-20, 2026 tour dates"><img class="poster" src="assets/new-nov9-20/poster-tap-to-book-nov9-20.jpg" alt="Updated Kaiser Solzie 10by10 poster, Tap to Book, Nov 9-20"><p class="fine">A request is not a confirmed reservation, and no payment is collected on this page until the set is confirmed in writing. Poster “Book Now” text is artwork only — use the Book it links above, which go to the booking portal.</p>
-<p><a class="btn" href="booking.html">Book it — $10</a></p>
-</div>
-<footer><div class="banner">KAISER SOLZIE / 10 × 10 / COAST TO COAST</div><p class="fine">KAISER SOLZIE • THE 10 BY 10 RAIL TOUR<br>Traveling coast-to-coast by Amtrak Rail Pass • All rights reserved.</p><p class="fine">Share the tour: kaisersolzie.com</p></footer>
-<p class="fine">Tour email: <a href="mailto:salz@kaisersolzie.com">salz@kaisersolzie.com</a> — via Spacemail for kaisersolzie.com</p>
+        <p class="font-zine text-sm sm:text-lg text-poster-rust font-bold mt-1">
+          Acoustic folk-punk guerrilla tour straight to your doorstep • Nov 9 – Nov 20
+        </p>
+      </header>
 
-</div>
-<div class="share-fab">
-<div class="share-panel" id="share-panel">
-<p>Share the tale of the tour</p>
-<a id="share-x" href="#" target="_blank" rel="noopener">Share on X</a>
-<a id="share-fb" href="#" target="_blank" rel="noopener">Share on Facebook</a>
-<a id="share-wa" href="#" target="_blank" rel="noopener">Share on WhatsApp</a>
-<a id="share-sms" href="#">Share by SMS</a>
-<a id="share-email" href="#">Share by email</a>
-<a id="share-copy" href="#">Copy tour link</a>
-<p id="share-status" style="font-weight:400;font-size:.85rem"></p>
-</div>
-<button class="share-btn" id="share-btn" aria-expanded="false">Share the tour ↗</button>
-</div>
-<script>
-(function(){
-const url=location.href, text="Kaiser Solzie — The 10 by 10 Rail Tour. 10 cities, 100 private 30-minute sets, $10 per set. November 9–20, 2026. Book it: ";
-document.getElementById("share-x").href="https://twitter.com/intent/tweet?text="+encodeURIComponent(text)+"&url="+encodeURIComponent(url);
-document.getElementById("share-fb").href="https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(url);
-document.getElementById("share-wa").href="https://wa.me/?text="+encodeURIComponent(text+url);
-document.getElementById("share-sms").href="sms:?body="+encodeURIComponent(text+url);
-document.getElementById("share-email").href="mailto:?subject="+encodeURIComponent("Kaiser Solzie — The 10 by 10 Rail Tour")+"&body="+encodeURIComponent(text+url);
-document.getElementById("share-copy").onclick=function(e){e.preventDefault(); if(navigator.clipboard){navigator.clipboard.writeText(url).then(()=>{document.getElementById("share-status").textContent="Link copied.";});} else {document.getElementById("share-status").textContent=url;}};
-const btn=document.getElementById("share-btn"), panel=document.getElementById("share-panel");
-btn.onclick=function(){const open=panel.classList.toggle("open"); btn.setAttribute("aria-expanded",String(open)); if(open && navigator.share){/* native share stays as fallback via the links below */}};
-})();
-</script>
+      <!-- HERO SPLIT: COMIC STRIP ARTWORK + THE CORE VALUE OFFER -->
+      <section class="grid grid-cols-1 lg:grid-cols-12 gap-6 my-6 items-stretch">
+        
+        <!-- Left: 3-Panel Story Comic Strip (Matches Poster Art) -->
+        <div class="lg:col-span-5 flex flex-col gap-4">
+          <div class="bg-poster-aged p-3 border-4 border-poster-ink shadow-punk flex-1">
+            <div class="flex items-center justify-between pb-2 border-b-2 border-poster-ink mb-3 font-zine text-xs font-bold uppercase tracking-widest">
+              <span>Scene 01: Your Sanctuary</span>
+              <span>Intimate 30-Min Gig</span>
+            </div>
+
+            <!-- Comic Panel 1: Bedroom Acoustic Gig Simulation -->
+            <div class="comic-frame relative mb-3 overflow-hidden group">
+              <div class="w-full h-56 sm:h-64 bg-gradient-to-tr from-[#305342] via-[#527d67] to-[#d6c77a] relative flex items-end p-4 border-b-2 border-poster-ink">
+                <!-- Illustrated SVG elements portraying intimate bedroom / acoustic session -->
+                <svg class="absolute inset-0 w-full h-full object-cover" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Room Wall & Window -->
+                  <rect width="400" height="300" fill="#4d6f66"/>
+                  <rect x="250" y="20" width="120" height="130" fill="#1b2e30" stroke="#111" stroke-width="4"/>
+                  <line x1="310" y1="20" x2="310" y2="150" stroke="#111" stroke-width="3"/>
+                  <line x1="250" y1="85" x2="370" y2="85" stroke="#111" stroke-width="3"/>
+                  <!-- Warm Night stars outside window -->
+                  <circle cx="280" cy="50" r="2" fill="#ffd166"/>
+                  <circle cx="335" cy="40" r="1.5" fill="#ffd166"/>
+                  <circle cx="300" cy="110" r="2.5" fill="#ffd166"/>
+                  <!-- Floor -->
+                  <polygon points="0,210 400,180 400,300 0,300" fill="#ba9264" stroke="#111" stroke-width="4"/>
+                  <!-- Rug -->
+                  <ellipse cx="200" cy="255" rx="150" ry="35" fill="#b04332" stroke="#111" stroke-width="3"/>
+                  <ellipse cx="200" cy="255" rx="120" ry="25" fill="#e9a441" stroke="#111" stroke-width="2"/>
+                  <!-- Guitar player silhouette styling -->
+                  <path d="M70,290 C65,220 80,180 120,150 C140,135 155,100 145,70 C138,50 160,35 175,45 C190,55 195,80 185,110 C180,125 190,140 200,165 C220,210 205,270 200,290 Z" fill="#1b1c1d" stroke="#111" stroke-width="4"/>
+                  <!-- Acoustic Guitar -->
+                  <ellipse cx="160" cy="200" rx="35" ry="45" transform="rotate(-25 160 200)" fill="#d37e38" stroke="#111" stroke-width="4"/>
+                  <circle cx="155" cy="195" r="12" fill="#111"/>
+                  <line x1="130" y1="230" x2="225" y2="120" stroke="#fff" stroke-width="2"/>
+                  <!-- Mic Stand -->
+                  <line x1="225" y1="70" x2="215" y2="280" stroke="#111" stroke-width="5"/>
+                  <polygon points="210,65 240,65 235,80 205,80" fill="#222" stroke="#111" stroke-width="2"/>
+                  <line x1="170" y1="280" x2="260" y2="280" stroke="#111" stroke-width="6"/>
+                  <!-- Soundwaves / Halftone -->
+                  <path d="M245,65 Q270,55 285,75" stroke="#f6eed5" stroke-width="3" stroke-linecap="round"/>
+                  <path d="M255,50 Q290,40 310,70" stroke="#f6eed5" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+                <div class="relative z-10 bg-poster-ink text-poster-cream font-zine text-[11px] px-2 py-1 border border-poster-cream">
+                  "YOUR LIVING ROOM, BACKYARD, ROOFTOP, OR FAVORITE SPOT."
+                </div>
+              </div>
+            </div>
+
+            <!-- Comic Panel 2 & 3: Living Room Crowd & The Van Travel -->
+            <div class="grid grid-cols-2 gap-3">
+              <!-- Panel 2: The Living Room Gathering -->
+              <div class="comic-frame p-2 bg-[#ecd8b0]">
+                <div class="h-24 bg-[#543b66] border-2 border-poster-ink relative flex items-center justify-center overflow-hidden">
+                  <div class="absolute inset-0 halftone"></div>
+                  <!-- Crowd shapes -->
+                  <div class="flex items-end justify-center gap-1.5 h-full pb-1 z-10">
+                    <div class="w-5 h-12 bg-poster-ink rounded-t-full"></div>
+                    <div class="w-6 h-16 bg-poster-rust rounded-t-full border border-black"></div>
+                    <div class="w-7 h-14 bg-poster-gold rounded-t-full border border-black"></div>
+                    <div class="w-5 h-10 bg-poster-teal rounded-t-full border border-black"></div>
+                    <div class="w-6 h-15 bg-poster-ink rounded-t-full"></div>
+                  </div>
+                  <span class="absolute top-1 left-2 font-headline text-[10px] tracking-wider text-poster-cream bg-poster-ink px-1">PRIVATE SESSION</span>
+                </div>
+                <p class="font-zine text-[11px] leading-tight mt-1 text-center font-bold">An intimate custom live set played directly in your personal space.</p>
+              </div>
+
+              <!-- Panel 3: The Van Dash -->
+              <div class="comic-frame p-2 bg-[#ecd8b0]">
+                <div class="h-24 bg-[#1e2f42] border-2 border-poster-ink relative flex items-center justify-center overflow-hidden">
+                  <div class="absolute inset-0 halftone"></div>
+                  <!-- Train / Van window view -->
+                  <div class="w-full h-12 bg-[#2d4766] border-y-2 border-poster-ink relative flex items-center justify-around">
+                    <span class="text-poster-gold text-lg">★</span>
+                    <span class="font-headline text-poster-cream tracking-widest text-xs">THE 10x10 TRANSIT</span>
+                    <span class="text-poster-gold text-lg">★</span>
+                  </div>
+                  <span class="absolute bottom-1 right-2 font-zine text-[9px] text-white">ON THE ROAD</span>
+                </div>
+                <p class="font-zine text-[11px] leading-tight mt-1 text-center font-bold">10 shows in 1 day per city. Zero stadium fluff.</p>
+              </div>
+            </div>
+
+            <!-- Retro Cassette Audio Teaser -->
+            <div class="mt-4 bg-poster-ink text-poster-cream p-3 border-2 border-poster-ink shadow-punk">
+              <div class="flex items-center justify-between mb-2">
+                <span class="font-zine text-xs uppercase flex items-center gap-1.5 text-poster-gold">
+                  <i data-lucide="cassette" class="w-4 h-4"></i> HEAR THE SOUND — YOUTUBE &amp; BANDCAMP BELOW
+                </span>
+                <span class="text-[10px] bg-poster-red px-1.5 py-0.5 font-bold uppercase rounded-sm">Lo-Fi Master</span>
+              </div>
+              <div class="flex items-center gap-3 bg-poster-cream text-poster-ink p-2 border-2 border-poster-ink rounded-sm">
+                <button id="audio-toggle-btn" onclick="toggleAudioDemo()" class="w-10 h-10 bg-poster-red hover:bg-poster-redDark text-white flex items-center justify-center rounded-sm border-2 border-poster-ink shadow-punk active:translate-x-0.5 active:translate-y-0.5 transition-all">
+                  <i data-lucide="play" id="audio-btn-icon" class="w-5 h-5 fill-current"></i>
+                </button>
+                <div class="flex-1">
+                  <div class="font-woodcut text-sm tracking-wide leading-none">"GHOST TOWNS & PORCH LIGHTS"</div>
+                  <div class="text-[11px] font-typewriter text-stone-700">Live Acoustic Soundboard cut (0:30 preview)</div>
+                  <!-- Fake retro audio scrub bar -->
+                  <div class="w-full bg-stone-300 h-2 mt-1 border border-black relative overflow-hidden">
+                    <div id="audio-progress" class="bg-poster-rust h-full w-0 transition-all duration-300"></div>
+                  </div>
+                </div>
+                <span id="audio-timer" class="font-typewriter text-xs font-bold">0:00</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: Core Propositions + 10-Piece Kit Showcase + Booking Triggers -->
+        <div class="lg:col-span-7 flex flex-col justify-between gap-4">
+          
+          <!-- Box 1: I'll Play Anywhere Value Banner -->
+          <div class="bg-poster-aged border-4 border-poster-ink p-5 shadow-punk relative">
+            <div class="absolute -top-3 right-6 bg-poster-gold border-2 border-poster-ink px-3 py-0.5 text-xs font-headline tracking-wider uppercase shadow-punk">
+              DIRECT ARTIST BOOKING
+            </div>
+            
+            <h3 class="font-headline text-3xl sm:text-4xl text-poster-ink leading-none uppercase">
+              I'LL PLAY WHEREVER YOU WANT! • <span class="text-poster-red">$10</span>
+            </h3>
+            
+            <p class="font-zine text-lg sm:text-xl text-poster-ink font-bold mt-2">
+              “Your living room, backyard, rooftop, basement, front porch, coffee shop corner, or favorite hidden spot.”
+            </p>
+            <p class="text-sm font-typewriter mt-2 leading-relaxed text-stone-800">
+              Kaiser Solzie rolls up with acoustic guitar and microphone in hand. No promoters, no $20 venue beers, no high-ticket barriers. You reserve the private 30-minute custom set for you and your inner circle for a flat ten-dollar bill.
+            </p>
+          </div>
+
+          <!-- Box 2: YOU OWN THE LIVE RECORDING & RIGHTS (BIG BOLD FOCUS) -->
+          <div class="bg-[#fcf3cf] border-4 border-poster-ink p-5 shadow-punk relative overflow-hidden">
+            <div class="absolute -right-8 -bottom-8 w-28 h-28 halftone rounded-full pointer-events-none"></div>
+            
+            <div class="flex items-center gap-2 text-poster-red mb-1 font-headline text-xl sm:text-2xl uppercase">
+              <i data-lucide="shield-check" class="w-7 h-7"></i>
+              <span>EACH SET IS RECORDED! YOU OWN THE RIGHTS!</span>
+            </div>
+
+            <div class="border-t-2 border-b-2 border-poster-ink py-2 my-2 bg-poster-cream px-3">
+              <p class="font-woodcut text-base sm:text-xl text-poster-ink tracking-wide uppercase font-bold">
+                ★ INCLUDES 100% FULL RIGHTS TO YOUR PERSONAL LIVE SET ★
+              </p>
+            </div>
+
+            <p class="font-typewriter text-xs sm:text-sm text-stone-900 leading-normal">
+              Every note is captured directly off the soundboard and room condenser mic. We don't lock it up in a corporate vault: <strong>YOU own the master live recording</strong> to your set. Put it on Spotify, press vinyl, sample it, upload to YouTube, or cherish it forever. Loaded instantly onto your custom physical USB cassette.
+            </p>
+          </div>
+
+          <!-- Box 3: 10-PIECE CUSTOM KIT BREAKDOWN -->
+          <div class="bg-poster-cream border-4 border-poster-ink p-4 sm:p-5 shadow-punk">
+            <div class="flex flex-wrap items-center justify-between border-b-2 border-poster-ink pb-2 mb-3">
+              <h4 class="font-headline text-2xl text-poster-ink uppercase tracking-wide flex items-center gap-2">
+                <i data-lucide="package-open" class="w-6 h-6 text-poster-rust"></i>
+                YOU GET A 10-PIECE CUSTOM TOUR KIT:
+              </h4>
+              <span class="bg-poster-ink text-poster-gold text-xs font-woodcut px-2 py-1 uppercase tracking-wider">
+                Included with every $10 set
+              </span>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-center text-xs font-woodcut uppercase">
+              <div class="border-2 border-poster-ink bg-white p-2 shadow-sm rounded-sm hover:bg-poster-gold transition">
+                <i data-lucide="shirt" class="w-5 h-5 mx-auto mb-1 text-poster-ink"></i>
+                <span class="leading-tight block font-bold">1. Tour T-Shirt</span>
+              </div>
+              <div class="border-2 border-poster-ink bg-white p-2 shadow-sm rounded-sm hover:bg-poster-gold transition">
+                <i data-lucide="ticket" class="w-5 h-5 mx-auto mb-1 text-poster-ink"></i>
+                <span class="leading-tight block font-bold">2. Commem. Ticket</span>
+              </div>
+              <div class="border-2 border-poster-ink bg-white p-2 shadow-sm rounded-sm hover:bg-poster-gold transition">
+                <i data-lucide="image" class="w-5 h-5 mx-auto mb-1 text-poster-ink"></i>
+                <span class="leading-tight block font-bold">3. Screenprint Poster</span>
+              </div>
+              <div class="border-2 border-poster-ink bg-white p-2 shadow-sm rounded-sm hover:bg-poster-gold transition">
+                <i data-lucide="book-open" class="w-5 h-5 mx-auto mb-1 text-poster-ink"></i>
+                <span class="leading-tight block font-bold">4. Tour Zine</span>
+              </div>
+              <div class="border-2 border-poster-ink bg-white p-2 shadow-sm rounded-sm hover:bg-poster-gold transition">
+                <i data-lucide="award" class="w-5 h-5 mx-auto mb-1 text-poster-ink"></i>
+                <span class="leading-tight block font-bold">5. Enamel Pin Pack</span>
+              </div>
+              <div class="border-2 border-poster-ink bg-white p-2 shadow-sm rounded-sm hover:bg-poster-gold transition">
+                <i data-lucide="sparkles" class="w-5 h-5 mx-auto mb-1 text-poster-ink"></i>
+                <span class="leading-tight block font-bold">6. Vinyl Stickers</span>
+              </div>
+              <div class="border-2 border-poster-ink bg-white p-2 shadow-sm rounded-sm hover:bg-poster-gold transition">
+                <i data-lucide="tag" class="w-5 h-5 mx-auto mb-1 text-poster-ink"></i>
+                <span class="leading-tight block font-bold">7. Woven Patch</span>
+              </div>
+              <div class="border-2 border-poster-ink bg-white p-2 shadow-sm rounded-sm hover:bg-poster-gold transition">
+                <i data-lucide="disc" class="w-5 h-5 mx-auto mb-1 text-poster-ink"></i>
+                <span class="leading-tight block font-bold">8. Guitar Pick Tin</span>
+              </div>
+              <div class="border-2 border-poster-ink bg-white p-2 shadow-sm rounded-sm hover:bg-poster-gold transition">
+                <i data-lucide="badge" class="w-5 h-5 mx-auto mb-1 text-poster-ink"></i>
+                <span class="leading-tight block font-bold">9. VIP Pass</span>
+              </div>
+              <div class="border-2 border-poster-ink bg-poster-gold p-2 shadow-sm rounded-sm font-black text-poster-ink">
+                <i data-lucide="hard-drive" class="w-5 h-5 mx-auto mb-1 text-poster-ink"></i>
+                <span class="leading-tight block">10. USB Cassette</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Jump-to-Booking Bar -->
+          <div class="flex flex-col sm:flex-row gap-3 items-center justify-between bg-poster-ink text-poster-cream p-4 border-2 border-poster-ink shadow-punk">
+            <div>
+            <label class="block font-bold mb-1 uppercase font-woodcut">Venue Type & Suggested Address *</label>
+            <input type="text" id="venue-location" required placeholder="e.g. 4th floor walk-up living room, Logan Square, Chicago" class="w-full bg-white border-2 border-poster-ink p-2 focus:outline-none focus:border-poster-red font-typewriter">
+            <span class="text-[10px] text-stone-600 italic">Living room, backyard, porch, art loft, garage, rooftop, etc.</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block font-bold mb-1 uppercase font-woodcut">T-Shirt Size (In Kit) *</label>
+              <select id="tshirt-size" class="w-full bg-white border-2 border-poster-ink p-2 focus:outline-none focus:border-poster-red font-typewriter">
+                <option value="S">Small (S)</option>
+                <option value="M" selected>Medium (M)</option>
+                <option value="L">Large (L)</option>
+                <option value="XL">Extra Large (XL)</option>
+                <option value="2XL">2XL</option>
+              </select>
+            </div>
+            <div>
+              <label class="block font-bold mb-1 uppercase font-woodcut">Song Requests / Special Notes</label>
+              <input type="text" id="song-requests" placeholder="Favorite acoustic songs, acoustic-only vibe, etc." class="w-full bg-white border-2 border-poster-ink p-2 focus:outline-none focus:border-poster-red font-typewriter">
+            </div>
+          </div>
+
+          <!-- Summary Recap Box -->
+          </p>
+        </div>
+
+        <!-- City Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="cities-container">
+          <!-- Dynamically populated or rendered below -->
+        </div>
+      </section>
+
+      <p class="font-typewriter text-xs mt-4">Nov 14–15, Orlando, FL — Vans Warped Tour public event, not a 10by10 set day. The 10 set cities above are Nov 9 Chicago, Nov 10 NYC, Nov 11 Atlanta, Nov 12 St. Pete, Nov 13 Orlando, Nov 16 Dallas, Nov 17 Austin &amp; San Antonio, Nov 18 Los Angeles, Nov 19 San Diego, Nov 20 San Francisco.</p>
+      <img src="assets/new-nov9-20/poster-clean-nov9-20.jpg" alt="Updated Kaiser Solzie 10by10 poster, Nov 9-20, 2026" style="width:100%;max-width:620px;height:auto;display:block;margin:1rem auto;border:4px solid #111">
+      <section class="my-8 bg-poster-aged border-4 border-poster-ink p-6 shadow-punk">
+        <h3 class="font-headline text-2xl uppercase">Watch &amp; Listen</h3>
+        <div style="position:relative;padding-top:56.25%;max-width:720px;margin:1rem auto"><iframe style="position:absolute;inset:0;width:100%;height:100%;border:0" src="https://www.youtube-nocookie.com/embed/ugyQeCp4PYo?rel=0" title="Kaiser Solzie archive clip" allowfullscreen></iframe></div>
+        <p><a href="https://kaisersolzie28.bandcamp.com/album/this-ones-for-friends-and-family-acoustic-tales-of-years" target="_blank" rel="noopener">Listen to the acoustic album ↗</a> &nbsp; <a href="https://www.youtube.com/user/TheKaiserChannel" target="_blank" rel="noopener">More on YouTube ↗</a></p>
+        <p class="font-typewriter text-xs">Tour email: <a href="mailto:salz@kaisersolzie.com">salz@kaisersolzie.com</a></p>
+      </section>
+      <!-- HOW IT WORKS & FAQ PUNK ACCORDION -->
+      <section class="my-8 bg-poster-aged border-4 border-poster-ink p-6 shadow-punk">
+        <div class="flex items-center gap-2 border-b-2 border-poster-ink pb-3 mb-4">
+          <i data-lucide="help-circle" class="w-7 h-7 text-poster-red"></i>
+          <h3 class="font-headline text-2xl sm:text-3xl uppercase tracking-wide">HOW THIS ACTUALLY WORKS (ZERO NONSENSE)</h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-typewriter">
+          <div class="bg-poster-cream border-2 border-poster-ink p-3 shadow-sm">
+            <div class="font-woodcut text-sm text-poster-red uppercase font-bold mb-1">1. YOU PICK ANY VENUE</div>
+            <p>Living rooms, fire escapes, porch steps, garages, public gazebos, art studios, dorm common rooms. If you have permission or reasonable audacity, Kaiser Solzie will be there.</p>
+          </div>
+          <div class="bg-poster-cream border-2 border-poster-ink p-3 shadow-sm">
+            <div class="font-woodcut text-sm text-poster-red uppercase font-bold mb-1">2. WE ROLL UP COMPACT</div>
+            <p>Setup takes 4 minutes. A portable acoustic amp or 100% unplugged raw delivery, a vocal mic, and soundboard recorder. Fast, clean, respectful of your space and neighbors.</p>
+          </div>
+          <div class="bg-poster-cream border-2 border-poster-ink p-3 shadow-sm">
+            <div class="font-woodcut text-sm text-poster-red uppercase font-bold mb-1">3. RECORDING & 10-PIECE KIT</div>
+            <p>As the set finishes, you receive the full 10-piece custom tour kit and the master recording file of your show. The sound rights are transferred to you completely.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- BOTTOM BANNER - LIST OF 10 ITEMS (Matches the Poster Footer exactly) -->
+      <footer class="mt-8 border-t-4 border-poster-ink pt-6">
+        <div class="bg-poster-gold border-4 border-poster-ink p-3 text-center shadow-punk">
+          <div class="font-woodcut text-xs sm:text-sm md:text-base font-black tracking-widest text-poster-ink uppercase">
+            YOU GET: T-SHIRT • TICKET • POSTER • ZINE • PIN • STICKER • PATCH • PICK TIN • VIP PASS • CASSETTE
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center justify-between mt-4 text-xs font-zine font-bold tracking-wider text-center sm:text-left gap-3">
+          <div>
+            BOOK YOUR PRIVATE SLOT NOW: <a href="booking.html" class="text-poster-red hover:underline font-bold text-sm">BOOK IT — $10</a>
+          </div>
+          <div class="text-stone-700">
+            KAISER SOLZIE'S 10 • 10 CITIES • NOV 9–20 • COAST TO COAST
+          </div>
+        </div>
+
+        <!-- Legals & Ownership Note -->
+        <div class="text-[11px] font-typewriter text-stone-600 text-center mt-4 border-t border-stone-400 pt-3">
+          * Patron ownership of the live recording covers all private audio captured during the specific 30-minute booked slot. Kaiser Solzie retains songwriter publishing rights. Booking slots non-transferable without prior coordination.
+        </div>
+      </footer>
+
+      <!-- Bottom Corner Badges -->
+      <div class="absolute -bottom-3 -left-3 z-30">
+        <div class="starburst-badge bg-poster-red text-poster-cream w-16 h-16 sm:w-20 sm:h-20 flex flex-col items-center justify-center shadow-lg transform rotate-6">
+          <span class="font-headline text-lg sm:text-2xl leading-none font-black">$10</span>
+          <span class="text-[9px] uppercase font-bold tracking-tighter">PRIVATE</span>
+        </div>
+      </div>
+      <div class="absolute -bottom-3 -right-3 z-30">
+        <div class="starburst-badge bg-poster-red text-poster-cream w-16 h-16 sm:w-20 sm:h-20 flex flex-col items-center justify-center shadow-lg transform -rotate-6">
+          <span class="font-headline text-lg sm:text-2xl leading-none font-black">$10</span>
+          <span class="text-[9px] uppercase font-bold tracking-tighter">ALL ACCESS</span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Booking goes to booking.html -->
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // Tour Dates and Available 10-Slot Inventory
+    const tourSchedule = [
+      { id: 'chi', date: 'NOV 9', city: 'CHICAGO, IL', region: 'Midwest' },
+      { id: 'nyc', date: 'NOV 10', city: 'NYC, NY', region: 'East Coast' },
+      { id: 'atl', date: 'NOV 11', city: 'ATLANTA, GA', region: 'South' },
+      { id: 'stp', date: 'NOV 12', city: 'ST. PETE, FL', region: 'Florida' },
+      { id: 'orl1', date: 'NOV 13', city: 'ORLANDO, FL', region: 'Florida' },
+      { id: 'dal', date: 'NOV 16', city: 'DALLAS, TX', region: 'Texas' },
+      { id: 'atx', date: 'NOV 17', city: 'AUSTIN & SAN ANTONIO, TX', region: 'Texas' },
+      { id: 'la', date: 'NOV 18', city: 'LOS ANGELES, CA', region: 'West Coast' },
+      { id: 'sd', date: 'NOV 19', city: 'SAN DIEGO, CA', region: 'West Coast' },
+      { id: 'sf', date: 'NOV 20', city: 'SAN FRANCISCO, CA', region: 'Bay Area' }
+    ];
+
+    let currentSelectedCity = tourSchedule[0];
+
+    const bookingCity = {'CHICAGO, IL':'Chicago, IL','NYC, NY':'New York City, NY','ATLANTA, GA':'Atlanta, GA','ST. PETE, FL':'St. Pete / Tampa, FL','ORLANDO, FL':'Orlando, FL','DALLAS, TX':'Dallas / Fort Worth, TX','AUSTIN & SAN ANTONIO, TX':'Austin & San Antonio, TX','LOS ANGELES, CA':'Los Angeles, CA','SAN DIEGO, CA':'San Diego, CA','SAN FRANCISCO, CA':'San Francisco / Bay Area, CA'};
+    function goBooking(city){ window.location.href='booking.html?city='+encodeURIComponent(bookingCity[city]||city); }
+    // Render City Cards
+    function renderCities() {
+      const container = document.getElementById('cities-container');
+      container.innerHTML = '';
+
+      tourSchedule.forEach(item => {
+          const card = document.createElement('div');
+        card.className = `border-4 border-poster-ink bg-white p-4 shadow-punk hover:shadow-punk-lg transition relative flex flex-col justify-between`;
+        
+        card.innerHTML = `
+          <div>
+            <div class="flex items-center justify-between border-b-2 border-poster-ink pb-2 mb-2">
+              <span class="font-headline text-lg sm:text-xl text-poster-red">${item.date}</span>
+              <span class="text-[10px] font-woodcut uppercase px-2 py-0.5 border border-black bg-poster-gold text-black">10 spots per city</span>
+            </div>
+            
+            <h4 class="font-headline text-2xl text-poster-ink tracking-tight uppercase leading-none mt-1">
+              ${item.city}
+            </h4>
+            
+            <p class="font-zine text-xs text-stone-700 mt-2">
+              Private 30-min window • Soundboard master recording included.
+            </p>
+
+            <div class="mt-3 py-1.5 px-2 bg-poster-aged border border-stone-800 text-[11px] font-typewriter">
+              <span class="font-bold">Times:</span> confirmed in writing for your city day
+            </div>
+          </div>
+
+          <div class="mt-4 pt-3 border-t-2 border-dashed border-stone-400 flex items-center justify-between">
+            <span class="font-headline text-xl text-poster-ink font-bold">$10</span>
+            <button onclick="goBooking('${item.city}')" class="bg-poster-ink hover:bg-poster-red text-poster-cream font-woodcut text-xs uppercase px-4 py-2 border border-black transition shadow-sm active:translate-x-0.5 active:translate-y-0.5">
+              Claim $10 Spot
+            </button>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    // Retro Audio Demo Simulation (Using Web Audio Synth for Folk-Punk Acoustic Vibe)
+    let isPlayingAudio = false;
+    let audioTimerInterval = null;
+    let secondsPlayed = 0;
+    let audioCtx = null;
+
+    function toggleAudioDemo() {
+      const btnIcon = document.getElementById('audio-btn-icon');
+      const progressBar = document.getElementById('audio-progress');
+      const timerLabel = document.getElementById('audio-timer');
+
+      if (!isPlayingAudio) {
+        isPlayingAudio = true;
+        btnIcon.setAttribute('data-lucide', 'square');
+        lucide.createIcons();
+
+        // Synth acoustic guitar simulation via Web Audio API
+        try {
+          if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+          playAcousticChords(audioCtx);
+        } catch(e) {
+          console.log("AudioContext active");
+        }
+
+        audioTimerInterval = setInterval(() => {
+          secondsPlayed++;
+          let mins = Math.floor(secondsPlayed / 60);
+          let secs = secondsPlayed % 60;
+          timerLabel.innerText = `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+          progressBar.style.width = `${(secondsPlayed / 30) * 100}%`;
+
+          if (secondsPlayed >= 30) {
+            stopAudioDemo();
+          }
+        }, 1000);
+      } else {
+        stopAudioDemo();
+      }
+    }
+
+    function stopAudioDemo() {
+      isPlayingAudio = false;
+      clearInterval(audioTimerInterval);
+      secondsPlayed = 0;
+      document.getElementById('audio-timer').innerText = '0:00';
+      document.getElementById('audio-progress').style.width = '0%';
+      const btnIcon = document.getElementById('audio-btn-icon');
+      btnIcon.setAttribute('data-lucide', 'play');
+      lucide.createIcons();
+    }
+
+    // Simple warm acoustic rhythm pattern with Web Audio
+    function playAcousticChords(ctx) {
+      if (!ctx) return;
+      const notes = [220, 277.18, 329.63, 440, 329.63]; // A minor acoustic voicings
+      notes.forEach((freq, idx) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(freq, ctx.currentTime + (idx * 0.12));
+        gain.gain.setValueAtTime(0.08, ctx.currentTime + (idx * 0.12));
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 1.2 + (idx * 0.12));
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(ctx.currentTime + (idx * 0.12));
+        osc.stop(ctx.currentTime + 1.3 + (idx * 0.12));
+      });
+    }
+
+    // Initialize Page
+    window.addEventListener('DOMContentLoaded', () => {
+      renderCities();
+      lucide.createIcons();
+    });
+  </script>
+<div style="position:fixed;right:18px;bottom:18px;z-index:9999"><div id="share-panel" style="display:none;background:#F2E8CE;border:2px solid #111;padding:.8rem;margin-bottom:.6rem;width:240px"><p>Share the tale of the tour</p><a id="share-x" href="#" target="_blank" rel="noopener">Share on X</a><br><a id="share-fb" href="#" target="_blank" rel="noopener">Share on Facebook</a><br><a id="share-wa" href="#" target="_blank" rel="noopener">Share on WhatsApp</a><br><a id="share-sms" href="#">Share by SMS</a><br><a id="share-email" href="#">Share by email</a><br><a id="share-copy" href="#">Copy tour link</a><p id="share-status"></p></div><button id="share-btn" style="background:#A63A2E;color:#fff;border:2px solid #111;padding:.9rem 1.1rem;font-weight:800;cursor:pointer;text-transform:uppercase">Share the tour ↗</button></div><script>(function(){const url=location.href, text="Kaiser Solzie — The 10 by 10 Rail Tour. 10 cities, 100 private 30-minute sets, $10 per set. November 9–20, 2026. Book it: ";document.getElementById("share-x").href="https://twitter.com/intent/tweet?text="+encodeURIComponent(text)+"&url="+encodeURIComponent(url);document.getElementById("share-fb").href="https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(url);document.getElementById("share-wa").href="https://wa.me/?text="+encodeURIComponent(text+url);document.getElementById("share-sms").href="sms:?body="+encodeURIComponent(text+url);document.getElementById("share-email").href="mailto:?subject="+encodeURIComponent("Kaiser Solzie — The 10 by 10 Rail Tour")+"&body="+encodeURIComponent(text+url);document.getElementById("share-copy").onclick=function(e){e.preventDefault(); if(navigator.clipboard){navigator.clipboard.writeText(url).then(()=>{document.getElementById("share-status").textContent="Link copied.";});}};const btn=document.getElementById("share-btn"), panel=document.getElementById("share-panel");btn.onclick=function(){panel.style.display=panel.style.display==="block"?"none":"block";};})();</script>
 </body>
 </html>
