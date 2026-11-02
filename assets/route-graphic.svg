@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 250" role="img" aria-labelledby="title desc">
+<title id="title">The 10 by 10 proposed rail tour route</title><desc id="desc">A stylized rail line connecting the proposed tour cities from Chicago to the San Francisco Bay Area.</desc>
+<rect width="1100" height="250" rx="18" fill="#191916"/>
+<g fill="none" stroke="#51483e" stroke-width="2"><path d="M55 108H1045" stroke-dasharray="5 8"/><path d="M55 118H1045" stroke-dasharray="5 8"/></g>
+<path d="M55 113 C125 50 175 50 245 113 S365 176 445 113 S575 50 655 113 S795 176 865 113 S975 50 1045 113" fill="none" stroke="#f05a36" stroke-width="4"/>
+<g fill="#11110f" stroke="#f05a36" stroke-width="4"><circle cx="55" cy="113" r="9"/><circle cx="145" cy="77" r="7"/><circle cx="245" cy="113" r="9"/><circle cx="345" cy="158" r="7"/><circle cx="445" cy="113" r="9"/><circle cx="545" cy="77" r="7"/><circle cx="655" cy="113" r="9"/><circle cx="755" cy="158" r="7"/><circle cx="865" cy="113" r="9"/><circle cx="955" cy="77" r="7"/><circle cx="1045" cy="113" r="9"/></g>
+<g fill="#f2eee4" font-family="Arial,sans-serif" font-size="15" font-weight="700"><text x="55" y="35">CHICAGO</text><text x="245" y="205" text-anchor="middle">NEW YORK</text><text x="445" y="35" text-anchor="middle">ATLANTA / FLORIDA</text><text x="655" y="205" text-anchor="middle">TEXAS</text><text x="865" y="35" text-anchor="middle">LOS ANGELES</text><text x="1045" y="205" text-anchor="end">BAY AREA</text></g>
+<g fill="#b7b1a5" font-family="Arial,sans-serif" font-size="11" letter-spacing="2"><text x="55" y="232">PROPOSED CITY SEQUENCE · NOT A VERIFIED RAIL ITINERARY</text><text x="1045" y="232" text-anchor="end">KS—010</text></g>
+</svg>
