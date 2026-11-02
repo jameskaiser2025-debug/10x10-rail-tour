@@ -89,6 +89,18 @@ footer .banner{font-family:'Oswald',Impact,sans-serif;font-size:1.6rem;letter-sp
 <a class="city-btn" href="booking.html?city=San%20Francisco%20%2F%20Bay%20Area%2C%20CA">Nov 20 · San Francisco / Bay Area</a>
 </p>
 
+
+<h2>Pick your city — booking steps</h2>
+<p>Choose a city to see its 5 booking steps, then Book it.</p>
+<div id="city-buttons" style="display:flex;flex-wrap:wrap;gap:.5rem"></div>
+<div id="city-detail" class="card" style="margin-top:1rem"></div>
+<script>
+const CITIES=[["Nov 9","Chicago, IL"],["Nov 10","New York City, NY"],["Nov 11","Atlanta, GA"],["Nov 12","St. Pete / Tampa, FL"],["Nov 13","Orlando, FL"],["Nov 16","Dallas / Fort Worth, TX"],["Nov 17","Austin & San Antonio, TX"],["Nov 18","Los Angeles, CA"],["Nov 19","San Diego, CA"],["Nov 20","San Francisco / Bay Area, CA"]];
+const wrap=document.getElementById("city-buttons"), detail=document.getElementById("city-detail");
+function show(c){detail.innerHTML="<h3>"+c[0]+", 2026 — "+c[1]+"</h3><ol><li>Pick your spot — living room, backyard, rooftop, workplace, or park.</li><li>Submit your request in the Book it portal.</li><li>Kaiser reviews timing and transit for that city day.</li><li>Confirm in writing before any payment is requested.</li><li>Showtime — 30-minute one-on-one set, plus the 10-piece kit.</li></ol><p><a class=\"btn\" href=\"booking.html?city="+encodeURIComponent(c[1])+"\">Book it — "+c[1]+" · $10</a></p><p class=\"fine\">Nov 14–15, Orlando, is the Vans Warped Tour public weekend, not a set day.</p>";}
+CITIES.forEach(c=>{const b=document.createElement("button"); b.className="city-btn"; b.textContent=c[0]+" · "+c[1]; b.onclick=()=>show(c); wrap.appendChild(b);});
+show(CITIES[0]);
+</script>
 <h2>The rail pass dash</h2>
 <h3>Tour routing &amp; slot availability</h3>
 <img class="poster" src="assets/attached-nov9-20/poster-map-nov9-20.jpg" alt="Original 10by10 rail tour map poster">
