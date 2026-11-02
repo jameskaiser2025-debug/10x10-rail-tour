@@ -71,7 +71,7 @@
               <text x="40" y="132" fill="#f05a36" font-family="monospace" font-size="10" letter-spacing="4">THE 10 × 10 RAIL TOUR</text>
               <text x="40" y="565" fill="#b7b1a5" font-family="monospace" font-size="11" letter-spacing="3">A SONG FOR EVERY STOP</text>
             </svg>
-            <img src="assets/posters/poster-cover.jpg" alt="Original Kaiser Solzie 10by10 poster: DIY Punk Rock Home Tour, acoustic set in a living room with a train in the window" style="width:100%;height:auto;display:block">
+            <img src="assets/posters-nov9-20/poster-cover-nov9-20.jpg" alt="Original Kaiser Solzie 10by10 poster: DIY Punk Rock Home Tour, acoustic set in a living room with a train in the window" style="width:100%;height:auto;display:block">
           </div>
           <div class="art-caption"><span>LIVE / PERSONAL / IN TRANSIT</span><span>KS—010</span></div>
         </div>
@@ -147,15 +147,15 @@
     <section id="posters" class="sound-section">
       <div class="section-wrap">
         <p class="eyebrow">ORIGINAL ARTWORK</p><h2>The posters,<br><em>as made.</em></h2>
-        <p>These are Kaiser's original 10by10 posters, shown uncropped. The dates printed on them are the earlier Nov 2–15 tentative draft — they are <strong>not</strong> the locked tour dates on this page, which are November 9–20, 2026. Use this page's route list for the locked dates, not the posters' printed dates.</p>
+        <p>These are Kaiser's original 10by10 posters, updated with a locked-dates banner: <strong>November 9–20, 2026</strong>. The original artwork underneath is unchanged — any Nov 2–15 dates still printed inside the posters themselves are superseded by that banner and by this page's route list.</p>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem">
-          <a href="assets/posters/poster-cover.jpg"><img src="assets/posters/poster-cover.jpg" alt="10by10 Tour cover poster" style="width:100%;height:auto"></a>
-          <a href="assets/posters/poster-map.jpg"><img src="assets/posters/poster-map.jpg" alt="10by10 Rail Tour map poster" style="width:100%;height:auto"></a>
-          <a href="assets/posters/poster-living-room.jpg"><img src="assets/posters/poster-living-room.jpg" alt="Amtrak Rail Pass Dash poster, living room and train" style="width:100%;height:auto"></a>
-          <a href="assets/posters/poster-bundle.jpg"><img src="assets/posters/poster-bundle.jpg" alt="10by10 bundle poster" style="width:100%;height:auto"></a>
-          <a href="assets/posters/poster-howto.jpg"><img src="assets/posters/poster-howto.jpg" alt="How to claim your 30-minute mythical blip poster" style="width:100%;height:auto"></a>
-          <a href="assets/posters/poster-mythical.jpg"><img src="assets/posters/poster-mythical.jpg" alt="10by10 Rail Pass Dash mythical blip poster" style="width:100%;height:auto"></a>
-          <a href="assets/posters/poster-large.jpg"><img src="assets/posters/poster-large.jpg" alt="Large 10by10 poster with living room and Amtrak night train" style="width:100%;height:auto"></a>
+          <a href="assets/posters-nov9-20/poster-cover-nov9-20.jpg"><img src="assets/posters-nov9-20/poster-cover-nov9-20.jpg" alt="10by10 Tour cover poster" style="width:100%;height:auto"></a>
+          <a href="assets/posters-nov9-20/poster-map-nov9-20.jpg"><img src="assets/posters-nov9-20/poster-map-nov9-20.jpg" alt="10by10 Rail Tour map poster" style="width:100%;height:auto"></a>
+          <a href="assets/posters-nov9-20/poster-living-room-nov9-20.jpg"><img src="assets/posters-nov9-20/poster-living-room-nov9-20.jpg" alt="Amtrak Rail Pass Dash poster, living room and train" style="width:100%;height:auto"></a>
+          <a href="assets/posters-nov9-20/poster-bundle-nov9-20.jpg"><img src="assets/posters-nov9-20/poster-bundle-nov9-20.jpg" alt="10by10 bundle poster" style="width:100%;height:auto"></a>
+          <a href="assets/posters-nov9-20/poster-howto-nov9-20.jpg"><img src="assets/posters-nov9-20/poster-howto-nov9-20.jpg" alt="How to claim your 30-minute mythical blip poster" style="width:100%;height:auto"></a>
+          <a href="assets/posters-nov9-20/poster-mythical-nov9-20.jpg"><img src="assets/posters-nov9-20/poster-mythical-nov9-20.jpg" alt="10by10 Rail Pass Dash mythical blip poster" style="width:100%;height:auto"></a>
+          <a href="assets/posters-nov9-20/poster-large-nov9-20.jpg"><img src="assets/posters-nov9-20/poster-large-nov9-20.jpg" alt="Large 10by10 poster with living room and Amtrak night train" style="width:100%;height:auto"></a>
         </div>
         <p class="fine-print">Tap any poster to open it full-size. Poster "Book Now" text is artwork only — booking on this page is requests only, with no payment collected here.</p>
       </div>
@@ -176,7 +176,7 @@
           <label>Anything Kaiser should know (access, space, sound) <textarea name="notes" rows="3" style="width:100%"></textarea></label>
           <button type="submit" class="button button-primary">Build my spot request</button>
         </form>
-        <div id="spot-summary" style="white-space:pre-wrap;margin-top:1rem"></div>
+        <p><a id="city-book-link" class="button button-primary" href="booking.html">Book it — $10</a></p><div id="spot-summary" style="white-space:pre-wrap;margin-top:1rem"></div>
         <p class="fine-print">This builds a request summary on this page only. It is not sent, booked, or paid for here. A set is confirmed only in writing, after timing and transit are checked — and no payment is requested until then.</p>
       </div>
       <div class="booking-stamp"><span>BOOKING</span><strong>REQUESTS ONLY</strong><small>NO PAYMENT COLLECTED ON THIS PAGE</small></div>
@@ -195,6 +195,8 @@ const detail=document.getElementById("city-detail");
 function renderCity(){
   detail.innerHTML="<h3>"+selected[0]+", 2026 — "+selected[1]+"</h3><p>10 one-on-one, 30-minute acoustic sets. 1 person per set. $10 per set, plus the 10-piece tour kit — payment only after written confirmation.</p><ol><li><strong>Pick your spot:</strong> living room, backyard, rooftop, workplace, or park in "+selected[1]+".</li><li><strong>Submit the request below:</strong> spot type, preferred time window, and access notes.</li><li><strong>Kaiser reviews it:</strong> timing and rail/transit are checked for that city day.</li><li><strong>Confirm in writing:</strong> set time, location, price, and kit are confirmed before any payment is requested.</li><li><strong>Showtime:</strong> Kaiser arrives, plays your set, and hands over your kit items.</li></ol><p><em>Nov 14–15, Orlando, is the Vans Warped Tour weekend — a public event, not a 10-by-10 set day.</em></p>";
   btnWrap.querySelectorAll("button").forEach((b,i)=>{b.setAttribute("aria-pressed",String(CITIES[i]===selected));});
+  const book=document.getElementById("city-book-link");
+  if(book){book.href="booking.html?city="+encodeURIComponent(selected[1])+"&date="+encodeURIComponent(selected[0]); book.textContent="Book it — "+selected[1]+" · $10";}
 }
 CITIES.forEach((c)=>{
   const b=document.createElement("button"); b.type="button"; b.textContent=c[0]+" · "+c[1];

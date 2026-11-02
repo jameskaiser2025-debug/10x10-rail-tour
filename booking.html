@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book it — Kaiser Solzie 10by10 Tour</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="section-wrap" style="max-width:720px;margin:0 auto;padding:2rem 1.25rem">
+<p><a href="index.html">← Back to the tour page</a></p>
+<h1>Book it</h1>
+<p id="city-heading">Kaiser Solzie — The 10by10 Rail Tour</p>
+<div id="order" style="border:2px solid currentColor;padding:1rem">
+<p><strong>1 private, one-on-one, 30-minute acoustic set</strong></p>
+<p>Location you choose — living room, backyard, rooftop, workplace, or park.</p>
+<p>Plus the 10-piece tour kit: tour t-shirt, personalized ticket, zine, poster, pin pack, sticker pack, patch, pick tin, VIP pass, and USB cassette.</p>
+<p><strong>Total: $10</strong></p>
+<p id="city-line"></p>
+</div>
+<h2>Your spot</h2>
+<form id="book-form" style="display:grid;gap:.7rem">
+<label>Your name <input name="name" required style="width:100%"></label>
+<label>Email <input name="email" type="email" required style="width:100%"></label>
+<label>City <select name="city" id="city-select" style="width:100%"></select></label>
+<label>Spot type <select name="spot" style="width:100%"><option>Living room</option><option>Backyard</option><option>Rooftop</option><option>Workplace</option><option>Park / outdoor</option><option>Other</option></select></label>
+<label>Preferred time window <input name="time" placeholder="e.g. afternoon, after 6pm" style="width:100%"></label>
+<label>Anything Kaiser should know (access, space, sound) <textarea name="notes" rows="3" style="width:100%"></textarea></label>
+<h2>Payment — $10</h2>
+<p><strong>Payment checkout is not yet connected on this page.</strong> This portal saves your booking request below and shows the $10 total. You will <strong>not</strong> be charged here, and your spot is not confirmed until Kaiser confirms it in writing and a payment link is sent to you.</p>
+<p>Payment methods planned, as on the original posters: credit card, PayPal, or Venmo — to be connected by the tour owner before payments open.</p>
+<button type="submit" class="button button-primary">Save my $10 booking request</button>
+</form>
+<div id="book-summary" style="white-space:pre-wrap;margin-top:1rem"></div>
+<p class="fine-print">A request is not a confirmed reservation. Final set time, location, price, and kit are confirmed in writing before any payment is requested. November 9–20, 2026 is the locked date range; Nov 14–15, Orlando, is the Vans Warped Tour weekend, a public event, not a 10-by-10 set day.</p>
+</main>
+<script>
+const CITIES=[
+["Nov 9","Chicago, IL"],["Nov 10","New York City, NY"],["Nov 11","Atlanta, GA"],["Nov 12","St. Pete / Tampa, FL"],["Nov 13","Orlando, FL"],["Nov 16","Dallas / Fort Worth, TX"],["Nov 17","Austin & San Antonio, TX"],["Nov 18","Los Angeles, CA"],["Nov 19","San Diego, CA"],["Nov 20","San Francisco / Bay Area, CA — 100th set finale"]
+];
+const params=new URLSearchParams(location.search);
+const sel=document.getElementById("city-select");
+CITIES.forEach(c=>{const o=document.createElement("option"); o.value=c[1]; o.textContent=c[0]+", 2026 — "+c[1]; if(params.get("city")===c[1]) o.selected=true; sel.appendChild(o);});
+function updateLine(){
+  const c=CITIES.find(x=>x[1]===sel.value) || CITIES[0];
+  document.getElementById("city-line").textContent="City: "+c[0]+", 2026 — "+c[1]+" · 10 one-on-one sets in this city · $10 per set";
+  document.getElementById("city-heading").textContent="Book it — "+c[1]+" · "+c[0]+", 2026";
+}
+sel.addEventListener("change",updateLine); updateLine();
+document.getElementById("book-form").addEventListener("submit",e=>{
+  e.preventDefault(); const f=new FormData(e.target);
+  document.getElementById("book-summary").textContent="BOOKING REQUEST SAVED ON THIS PAGE ONLY (not sent, not charged)\nName: "+f.get("name")+"\nEmail: "+f.get("email")+"\nCity: "+f.get("city")+"\nSpot type: "+f.get("spot")+"\nPreferred time: "+(f.get("time")||"—")+"\nNotes: "+(f.get("notes")||"—")+"\nTotal: $10\n\nNext step: Kaiser reviews timing/transit for this city day, confirms in writing, and sends a payment link once checkout is connected. No payment has been taken.";
+});
+</script>
+</body>
+</html>
