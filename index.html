@@ -6,51 +6,40 @@
 <title>Kaiser Solzie • The 10 by 10 Rail Tour</title>
 <meta name="description" content="Kaiser Solzie — The 10 by 10 Rail Tour. Ten cities, ten private acoustic sets per city, $10 per set. November 9–20, 2026.">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
-<style>*{box-sizing:border-box} body{overflow-x:hidden}
-
-body{margin:0;background:#E8DCBE;color:#1A1A1A;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
-.ticker{background:#1A1A1A;color:#F2E8CE;text-align:center;padding:.5rem;font-family:'Courier Prime',Courier,monospace;text-transform:uppercase;font-size:.85rem;border-bottom:3px solid #A63A2E}
-header{display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto;padding:1rem 1.25rem;border-bottom:2px solid #1A1A1A}
-header a{color:#1A1A1A;text-decoration:underline;text-transform:uppercase;font-size:.85rem;margin-left:1rem}
-.wrap{max-width:1100px;margin:0 auto;padding:0 1.25rem 3rem}
-.eyebrow{font-family:'Courier Prime',Courier,monospace;text-transform:uppercase;letter-spacing:.08em;color:#A63A2E}
-h1,h2,h3{font-family:'Oswald',Impact,sans-serif;text-transform:uppercase;line-height:1.05}
-h1{font-size:4rem;margin:.4rem 0}
-h1 span{color:#A63A2E}
-h2{font-size:2.4rem;margin:3rem 0 .5rem}
-.hero{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;margin-top:1.5rem}
-.hero-img{width:100%;max-width:380px;height:auto;display:block;border:2px solid #1A1A1A;box-shadow:6px 6px 0 #1A1A1A;margin:0 auto}
-.poster{width:100%;max-width:620px;height:auto;display:block;border:2px solid #1A1A1A;box-shadow:6px 6px 0 #1A1A1A;margin:1rem auto}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);background:#F2E8CE;border:2px solid #1A1A1A;box-shadow:6px 6px 0 #1A1A1A;margin:2rem 0;text-align:center}
-.stats div{padding:1rem;border-left:2px dotted #999}
-.stats div:first-child{border-left:0}
-.stats strong{font-family:'Oswald',Impact,sans-serif;font-size:2.4rem;color:#A63A2E;display:block}
-.pill{display:inline-block;background:#1A1A1A;color:#F2E8CE;padding:.3rem .9rem;border-radius:20px;font-family:'Courier Prime',Courier,monospace;text-transform:uppercase;font-size:.85rem}
-.cards{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
-.card{background:#F2E8CE;border:2px solid #1A1A1A;box-shadow:6px 6px 0 #1A1A1A;padding:1.25rem}
-.card.red{background:#A63A2E;color:#F2E8CE}
-.card.red a{color:#F2E8CE}
-.btn{display:inline-block;padding:.8rem 1.3rem;background:#A63A2E;color:#fff;text-decoration:none;font-weight:800;text-transform:uppercase;box-shadow:4px 4px 0 #1A1A1A;margin:.4rem .3rem 0 0}
-.btn2{display:inline-block;padding:.8rem 1.3rem;border:2px solid #1A1A1A;color:#1A1A1A;text-decoration:none;font-weight:700;text-transform:uppercase;margin:.4rem .3rem 0 0}
-.btn-black{display:inline-block;padding:.5rem .9rem;background:#1A1A1A;color:#F2E8CE;text-decoration:none;font-weight:700;text-transform:uppercase;font-size:.85rem;box-shadow:3px 3px 0 #A63A2E}
-table{width:100%;border-collapse:collapse;margin:1rem 0;border:2px solid #1A1A1A}
-th{background:#1A1A1A;color:#F2E8CE;padding:.6rem .4rem;text-align:left;text-transform:uppercase;font-size:.85rem}
-td{padding:.6rem .4rem;border-bottom:1px solid #ccc;vertical-align:top}
-.city-btn{display:inline-block;margin:.25rem;padding:.5rem .8rem;border:2px solid #1A1A1A;text-decoration:none;color:#1A1A1A;font-size:.9rem;background:#F2E8CE;font:inherit;cursor:pointer}
-.fine{color:#555;font-size:.9rem}
-footer{border-top:2px solid #1A1A1A;text-align:center;padding:2rem 1rem}
-footer .banner{font-family:'Oswald',Impact,sans-serif;font-size:1.6rem;letter-spacing:.05em}
-@media(max-width:760px){.hero,.cards{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}h1{font-size:2.6rem}}
-
+<style>
+*{box-sizing:border-box} body{overflow-x:hidden;margin:0;background:#E8D9A8;color:#111;font-family:"Courier Prime",Courier,monospace}
+.page-frame{max-width:1100px;margin:0 auto;background:#F7E9C3;border:3px solid #111;outline:3px double #111;outline-offset:6px;padding:1.25rem}
+h1,h2,h3{font-family:Oswald,Arial,sans-serif;text-transform:uppercase;letter-spacing:.02em}
+.masthead{text-align:center}
+.masthead h1{font-size:clamp(2.6rem,9vw,6rem);line-height:.9;margin:.3rem 0}
+.stars{font-size:1.4rem;letter-spacing:.3em}
+.gold-bar{background:#C9A227;color:#111;font-family:Oswald,Arial,sans-serif;font-weight:700;text-transform:uppercase;text-align:center;padding:.6rem;border:2px solid #111;margin:1rem 0}
+.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:1.5rem;align-items:start}
+@media(max-width:760px){.hero-grid{grid-template-columns:1fr}}
+.hero-img{width:100%;max-width:520px;height:auto;display:block;border:2px solid #111;box-shadow:6px 6px 0 #111;margin:0 auto}
+.poster{width:100%;max-width:620px;height:auto;display:block;border:2px solid #111;box-shadow:6px 6px 0 #111;margin:1rem auto}
+a{color:#111}
+.btn,.city-btn,.book-btn{display:inline-block;margin:.25rem;padding:.7rem 1rem;border:2px solid #111;background:#A63A2E;color:#fff;text-decoration:none;font-family:Oswald,Arial,sans-serif;font-weight:700;text-transform:uppercase;box-shadow:4px 4px 0 #111;cursor:pointer}
+.city-btn{background:#F2E8CE;color:#111;font:inherit;font-family:Oswald,Arial,sans-serif}
+.city-btn.active{background:#111;color:#F7E9C3}
+table{width:100%;border-collapse:collapse;background:#F2E8CE}
+th{background:#111;color:#F7E9C3;padding:.6rem;text-align:left}
+td{border:1px solid #111;padding:.5rem}
+.card{border:2px solid #111;background:#F2E8CE;padding:1rem;box-shadow:4px 4px 0 #111}
+.ticker{background:#111;color:#F7E9C3;text-align:center;padding:.5rem;font-weight:700;text-transform:uppercase}
+.footer-bar{background:#111;color:#F7E9C3;text-align:center;padding:1rem;font-family:Oswald,Arial,sans-serif;text-transform:uppercase}
+.price-badge{display:inline-block;background:#A63A2E;color:#fff;border:2px solid #111;padding:.4rem .8rem;font-family:Oswald,Arial,sans-serif;font-weight:700;transform:rotate(-6deg)}
 .share-fab{position:fixed;right:18px;bottom:18px;z-index:9999}
-.share-btn{background:#A63A2E;color:#fff;border:2px solid #1A1A1A;box-shadow:4px 4px 0 #1A1A1A;padding:.9rem 1.1rem;font-weight:800;cursor:pointer;text-transform:uppercase}
-.share-panel{display:none;background:#F2E8CE;border:2px solid #1A1A1A;box-shadow:4px 4px 0 #1A1A1A;padding:.8rem;margin-bottom:.6rem;width:240px;text-align:left}
+.share-btn{background:#A63A2E;color:#fff;border:2px solid #111;box-shadow:4px 4px 0 #111;padding:.9rem 1.1rem;font-weight:800;cursor:pointer;text-transform:uppercase}
+.share-panel{display:none;background:#F2E8CE;border:2px solid #111;box-shadow:4px 4px 0 #111;padding:.8rem;margin-bottom:.6rem;width:240px;text-align:left}
 .share-panel.open{display:block}
-.share-panel a{display:block;color:#1A1A1A;padding:.4rem 0;text-decoration:underline}
-.share-panel p{margin:.2rem 0;font-weight:700}
+.share-panel a{display:block;color:#111;padding:.4rem 0;text-decoration:underline}
 </style>
 </head>
 <body>
+<div class="page-frame">
+<header class="masthead"><h1>Kaiser Solzie&rsquo;s<br>10by10</h1><div class="stars">★ ★ ★ ★ 10by10 ★ ★ ★ ★</div><div class="gold-bar">10 special custom sets per city &bull; in 10 cities!</div><p><span class="price-badge">$10 per set</span> &nbsp; 100 private 30-minute sets &nbsp; Nov 9&ndash;20, 2026 &nbsp; Coast to coast</p></header>
+
 <div class="ticker">Rail Pass Dash • Nov 9–20 • Ten Cities • One Person Per Set • 100 Patrons Nationwide</div>
 <header><strong>Ⓚ KAISER SOLZIE</strong><nav><a href="#ticket">The Ticket</a><a href="#route">Routing</a><a href="#watch">The Sound</a></nav></header>
 <div class="wrap">
@@ -148,6 +137,7 @@ show(CITIES[0]);
 <footer><div class="banner">KAISER SOLZIE / 10 × 10 / COAST TO COAST</div><p class="fine">KAISER SOLZIE • THE 10 BY 10 RAIL TOUR<br>Traveling coast-to-coast by Amtrak Rail Pass • All rights reserved.</p><p class="fine">Share the tour: kaisersolzie.com</p></footer>
 <p class="fine">Tour email: <a href="mailto:salz@kaisersolzie.com">salz@kaisersolzie.com</a> — via Spacemail for kaisersolzie.com</p>
 
+</div>
 <div class="share-fab">
 <div class="share-panel" id="share-panel">
 <p>Share the tale of the tour</p>
